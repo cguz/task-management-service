@@ -1,5 +1,5 @@
 /*
- * SequenceTasksFactory.h
+ * SequenceTasksFactory.cpp
  *
  *  Created on: 07 may. 2021
  *
@@ -13,8 +13,6 @@
 //################### CONSTRUCTOR ###################
 
 SequenceTasksFactory::SequenceTasksFactory() {
-
-	// cout<< "\nConstructor of SequenceTasksFactory";
 
 }
 

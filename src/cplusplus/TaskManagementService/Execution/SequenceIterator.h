@@ -47,14 +47,6 @@ class SequenceIterator {
 		// total number of repetitions
 		long totalNumberIterations_;
 
-		// long currentAcquiredStep_; //<Index of current acquired step
-		// long currentReducedStep_; //<Index of current reduced step
-		// long currentScanDirection_;
-		// long currentRadialStep_;
-
-		// Boolean for the "current step acquired" state
-		// bool isCurrentStepAcquired_;
-
 
 	//--------------------------------------------------
 	// public section

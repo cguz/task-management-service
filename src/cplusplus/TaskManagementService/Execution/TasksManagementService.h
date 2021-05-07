@@ -1,5 +1,5 @@
 /*
- * TaskManagementService.cpp
+ * TaskManagementService.h
  *
  *  Created on: 07 may. 2021
  *
@@ -35,13 +35,8 @@ class TasksManagementService {
 
 
 		//################### METHODS ###################
-		void define();
-		void restore();
-		void reset();
 		void execute();
-		void resume();
 		void cancel();
-		void finish();
 		void pause();
 
 
@@ -64,10 +59,10 @@ class TasksManagementService {
 
 	private:
 
-		short currentExecutable = -1;
+		short _currentTask = -1;
 
-		// Catalog of executable commands or sequence
-		unordered_map <short, ITask*> executableCatalog;
+		// Catalog of executable task or sequence tasks
+		unordered_map <short, ITask*> _tasksCatalog;
 
 };
 

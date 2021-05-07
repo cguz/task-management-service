@@ -1,5 +1,5 @@
 /*
- * Control.cpp
+ * ClientControl.h
  *
  *  Created on: 07 may. 2021
  *
@@ -24,13 +24,13 @@ using namespace std;
 /**
  * Control class of the proposed solution
  */
-class Control {
+class ClientControl {
 
 	//################### CONSTRUCTOR ###################
 
 	public:
-		Control(SequenceTasksCatalogConstructor* sequenceConstructor);
-		virtual ~Control();
+		ClientControl(SequenceTasksCatalogConstructor* sequenceConstructor);
+		virtual ~ClientControl();
 
 
 	//################### METHODS ###################

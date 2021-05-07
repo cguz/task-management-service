@@ -23,10 +23,6 @@ void Task::execute() {
 
 }
 
-void Task::resume() {
-	cout << endl << "The method resume() is not implemented." << endl;
-}
-
 void Task::cancel() {
 	cout << endl << "The method finish() is not implemented." << endl;
 }

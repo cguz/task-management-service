@@ -22,13 +22,7 @@ SequenceIterator::SequenceIterator() {
 	totalNumberOfSteps_ = 0;
 	lastStep_ = totalNumberOfSteps_-1;
 }
-/*
-SequenceIterator::SequenceIterator(long totalNumberOfSteps) : totalNumberOfSteps_(totalNumberOfSteps) {
-	init();
-	totalNumberIterations_ = 1;
-	lastStep_ = totalNumberOfSteps_-1;
-}
-*/
+
 SequenceIterator::SequenceIterator(int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {
 	init();
 	totalNumberOfSteps_ = 0;

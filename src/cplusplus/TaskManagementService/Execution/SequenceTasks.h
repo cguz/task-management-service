@@ -1,5 +1,5 @@
 /*
- * SequenceTasks.cpp
+ * SequenceTasks.h
  *
  *  Created on: 07 may. 2021
  *
@@ -51,7 +51,6 @@ class SequenceTasks : public ITask {
 		void 	execute();
 		void 	cancel();
 		void 	pause();
-		void 	resume();
 
 
 		/**
@@ -78,7 +77,7 @@ class SequenceTasks : public ITask {
 	private:
 
 		// list of tasks or sequence of tasks to execute
-		vector <ITask*> tasksdList_;
+		vector <ITask*> tasksList_;
 
 };
 

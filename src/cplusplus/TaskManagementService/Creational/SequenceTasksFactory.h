@@ -1,5 +1,5 @@
 /*
- * SequenceTasksConstructor.h
+ * SequenceTasksFactory.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef FACTORYPM_ISEQUENCETASKSFACTORY_H_
-#define FACTORYPM_ISEQUENCETASKSFACTORY_H_
+#ifndef SEQUENCETASKSFACTORY_H_
+#define SEQUENCETASKSFACTORY_H_
 
 #include "../Execution/ITask.h"
 
@@ -33,4 +33,4 @@ class SequenceTasksFactory {
 
 };
 
-#endif /* FACTORYPM_ISEQUENCETASKSFACTORY_H_ */
+#endif /* SEQUENCETASKSFACTORY_H_ */

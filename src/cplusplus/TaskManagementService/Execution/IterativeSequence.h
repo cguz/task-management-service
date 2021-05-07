@@ -1,5 +1,5 @@
 /*
- * IterativeSequence.cpp
+ * IterativeSequence.h
  *
  *  Created on: 07 may. 2021
  *

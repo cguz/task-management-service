@@ -1,5 +1,5 @@
 /*
- * Control.cpp
+ * ClientControl.cpp
  *
  *  Created on: 07 may. 2021
  *
@@ -7,12 +7,12 @@
  *  Email: cguzwork@cguz.org
  */
 
-#include "Control.h"
+#include "ClientControl.h"
 
 
 //################### CONSTRUCTOR ###################
 
-Control::Control(SequenceTasksCatalogConstructor* catalogConstructor) {
+ClientControl::ClientControl(SequenceTasksCatalogConstructor* catalogConstructor) {
 
 	cout << "\n\nConstructor Control";
 	_catalogConstructor = catalogConstructor;
@@ -20,14 +20,14 @@ Control::Control(SequenceTasksCatalogConstructor* catalogConstructor) {
 
 }
 
-Control::~Control() {
+ClientControl::~ClientControl() {
 	cout << "Destructor of the class Control";
 }
 
 
 //################### METHODS ###################s
 
-void Control::build() {
+void ClientControl::build() {
 
 	for(int seqId : getSequenceIds()) {
 		_catalogConstructor->build(seqId);
@@ -35,27 +35,27 @@ void Control::build() {
 
 }
 
-void Control::select(short seqId) {
+void ClientControl::select(short Id) {
 
-	if(!_tasksManagement->isInitialized(seqId)) {
-		_tasksManagement->setSequence(seqId, _catalogConstructor->build(seqId));
+	if(!_tasksManagement->isInitialized(Id)) {
+		_tasksManagement->setSequence(Id, _catalogConstructor->build(Id));
 	}
 
 }
 
-void Control::execute() {
+void ClientControl::execute() {
 	_tasksManagement->execute();
 }
 
-void Control::cancel() {
+void ClientControl::cancel() {
 	_tasksManagement->cancel();
 }
 
-void Control::pause() {
+void ClientControl::pause() {
 	_tasksManagement->pause();
 }
 
 
-vector<int> Control::getSequenceIds(){
+vector<int> ClientControl::getSequenceIds(){
 	return _catalogConstructor->getSequenceIds();
 }

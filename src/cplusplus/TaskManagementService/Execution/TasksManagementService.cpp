@@ -15,44 +15,38 @@ TasksManagementService::TasksManagementService() {
 }
 
 TasksManagementService::~TasksManagementService() {
-	cout << "Destructor of the class SequenceExecutor";
+	cout << "Destructor of the class TasksManagementService";
 }
 
 
 //################### METHODS ###################
 
 void TasksManagementService::execute() {
-	if (currentExecutable == -1)
-		throw "The current executable id is not initialized in the SequenceExecutor. Please, call the method select(seqId)";
-	executableCatalog[currentExecutable]->execute();
+	if (_currentTask == -1)
+		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
+	_tasksCatalog[_currentTask]->execute();
 }
 
 void TasksManagementService::cancel() {
-	if (currentExecutable == -1)
-		throw "The current executable is not initialized, please, call the method select(seqId)";
-	executableCatalog[currentExecutable]->cancel();
-}
-
-void TasksManagementService::resume() {
-	if (currentExecutable == -1)
-		throw "The current executable is not initialized, please, call the method select(seqId)";
-	executableCatalog[currentExecutable]->resume();
+	if (_currentTask == -1)
+		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
+	_tasksCatalog[_currentTask]->cancel();
 }
 
 void TasksManagementService::pause() {
-	if (currentExecutable == -1)
-		throw "The current executable is not initialized, please, call the method select(seqId)";
-	executableCatalog[currentExecutable]->pause();
+	if (_currentTask == -1)
+		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
+	_tasksCatalog[_currentTask]->pause();
 }
 
 void TasksManagementService::setSequence(short seqId, ITask* executable) {
 
-	currentExecutable = seqId;
+	_currentTask = seqId;
 
-	executableCatalog[currentExecutable] = executable;
+	_tasksCatalog[_currentTask] = executable;
 
 }
 
 bool TasksManagementService::isInitialized(short seqId) {
-	return executableCatalog[seqId] != NULL;
+	return _tasksCatalog[seqId] != NULL;
 }

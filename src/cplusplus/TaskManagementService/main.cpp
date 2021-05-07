@@ -11,14 +11,14 @@
 
 #include "CLIENT/Creational/CustomSequenceCatalogConstructor.h"
 #include "Creational/SequenceTasksCatalogConstructor.h"
-#include "Control.h"
+#include "ClientControl.h"
 // #include <thread>
 
 
 //# global variables
 SequenceTasksCatalogConstructor* sequenceTasks;
 
-Control* controlClient;
+ClientControl* controlClient;
 
 
 /**
@@ -31,7 +31,7 @@ void testGeneral() {
 	cout << "-------------------" << endl;
 
 	sequenceTasks = new CustomSequenceCatalogConstructor();
-	controlClient = new Control(sequenceTasks);
+	controlClient = new ClientControl(sequenceTasks);
 
 
 	cout << "\n\n------------------------------------------" << endl;
@@ -72,7 +72,7 @@ void testClientTasks() {
 	cout << "-------------------" << endl;
 
 	sequenceTasks = new CustomSequenceCatalogConstructor();
-	controlClient = new Control(sequenceTasks);
+	controlClient = new ClientControl(sequenceTasks);
 
 
 	cout << "\n\n-----------------------------------" << endl;

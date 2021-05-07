@@ -1,5 +1,5 @@
 /*
- * SequenceTasksConstructor.cpp
+ * Task.h
  *
  *  Created on: 07 may. 2021
  *
@@ -30,7 +30,6 @@ class Task : public ITask {
 		void 	execute();
 		void 	cancel();
 		void 	pause();
-		void 	resume();
 
 
 };

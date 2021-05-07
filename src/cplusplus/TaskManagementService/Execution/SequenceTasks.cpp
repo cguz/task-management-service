@@ -74,7 +74,7 @@ void SequenceTasks::execute() {
 		while(!iterate->isEnd() && getState()->isRunning()) {
 
 			// get the command to execute
-			e = *(tasksdList_.begin()+iterate->getCurrentStepExecution());
+			e = *(tasksList_.begin()+iterate->getCurrentStepExecution());
 
 			// execute the command
 			e->execute();
@@ -114,27 +114,14 @@ void SequenceTasks::pause() {
 	}
 }
 
-
-void SequenceTasks::resume() {
-	cout << "\nResuming SequenceTasks.";
-
-	try {
-
-		execute();
-
-	} catch (...) {
-		cout<< endl <<"[Error]" << endl;
-	}
-}
-
 string SequenceTasks::getParameters() {
 	return "get parameters of a normal SequenceTasks";
 }
 
 void SequenceTasks::add(ITask* exe) {
-	tasksdList_.push_back(exe);
+	tasksList_.push_back(exe);
 
 	// we change the total number of steps according to the list of commands
-	iterate->setTotalNumberOfSteps(tasksdList_.size());
+	iterate->setTotalNumberOfSteps(tasksList_.size());
 }
 
