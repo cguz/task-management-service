@@ -1,5 +1,5 @@
 /*
- * SeqStatePaused.cpp
+ * StateSuccess.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef L_StateQueue_H_
-#define L_StateQueue_H_
+#ifndef L_StateSuccess_H_
+#define L_StateSuccess_H_
 
 #include <iostream>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include "State.h"
 
 
-class StatePaused : public State {
+class StateSuccess : public State {
 
 	//--------------------------------------------------
 	// public section
@@ -26,7 +26,7 @@ class StatePaused : public State {
 
 		//########################## CONSTRUCTOR & DESTRUCTOR #########################
 
-		StatePaused();
+		StateSuccess();
 
 
 		//########################## METHODS TO TRANSICT #########################
@@ -37,11 +37,11 @@ class StatePaused : public State {
 
 		void pause(SequenceTasks* context);
 
-		void fail(SequenceTasks* context);
-
 		void finish(SequenceTasks* context);
+
+		void fail(SequenceTasks* context);
 
 };
 
 
-#endif /* L_StateQueue_H_ */
+#endif /* L_StateSuccess_H_ */

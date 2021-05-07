@@ -134,7 +134,7 @@ void testClientTasks() {
 
 
 	cout << "\n\n-----------------------------------" << endl;
-	cout << "3. Choose the sequence task SEQ_CUSTOM1 (it only contains one task) for execution" << endl;
+	cout << "3. Choose the sequence task SEQ_CUSTOM1 for execution" << endl;
 	cout << "---------------------------------------" << endl;
 
 	controlClient->select(CustomSequenceTasksCatalogConstructor::SEQ_CUSTOM1);

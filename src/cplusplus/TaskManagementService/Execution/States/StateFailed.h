@@ -1,5 +1,5 @@
 /*
- * StateSuccess.cpp
+ * StateFailed.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef L_StateSuccess_H_
-#define L_StateSuccess_H_
+#ifndef L_StateFailed_H_
+#define L_StateFailed_H_
 
 #include <iostream>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include "State.h"
 
 
-class StateSuccess : public State {
+class StateFailed : public State {
 
 	//--------------------------------------------------
 	// public section
@@ -26,7 +26,7 @@ class StateSuccess : public State {
 
 		//########################## CONSTRUCTOR & DESTRUCTOR #########################
 
-		StateSuccess();
+		StateFailed();
 
 
 		//########################## METHODS TO TRANSICT #########################
@@ -37,11 +37,11 @@ class StateSuccess : public State {
 
 		void pause(SequenceTasks* context);
 
-		void finish(SequenceTasks* context);
-
 		void fail(SequenceTasks* context);
+
+		void finish(SequenceTasks* context);
 
 };
 
 
-#endif /* L_StateSuccess_H_ */
+#endif /* L_SeqStateAborted_H_ */

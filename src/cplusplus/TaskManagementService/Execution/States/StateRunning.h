@@ -1,5 +1,5 @@
 /*
- * SeqStateCanceled.cpp
+ * SeqStateRunning.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef L_StateCancelled_H_
-#define L_StateCancelled_H_
+#ifndef L_StateRunning_H_
+#define L_StateRunning_H_
 
 #include <iostream>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include "State.h"
 
 
-class StateCancelled : public State {
+class StateRunning : public State {
 
 	//--------------------------------------------------
 	// public section
@@ -26,7 +26,7 @@ class StateCancelled : public State {
 
 		//########################## CONSTRUCTOR & DESTRUCTOR #########################
 
-		StateCancelled();
+		StateRunning();
 
 
 		//########################## METHODS TO TRANSICT #########################
@@ -37,11 +37,12 @@ class StateCancelled : public State {
 
 		void pause(SequenceTasks* context);
 
+		void finish(SequenceTasks* context);
+
 		void fail(SequenceTasks* context);
 
-		void finish(SequenceTasks* context);
 
 };
 
 
-#endif /* L_StateCancelled_H_ */
+#endif /* L_StateRunning_H_ */

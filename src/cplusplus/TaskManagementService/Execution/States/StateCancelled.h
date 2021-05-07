@@ -1,5 +1,5 @@
 /*
- * SeqStateFailed.cpp
+ * StateCanceled.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef L_StateFailed_H_
-#define L_StateFailed_H_
+#ifndef L_StateCancelled_H_
+#define L_StateCancelled_H_
 
 #include <iostream>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include "State.h"
 
 
-class StateFailed : public State {
+class StateCancelled : public State {
 
 	//--------------------------------------------------
 	// public section
@@ -26,7 +26,7 @@ class StateFailed : public State {
 
 		//########################## CONSTRUCTOR & DESTRUCTOR #########################
 
-		StateFailed();
+		StateCancelled();
 
 
 		//########################## METHODS TO TRANSICT #########################
@@ -44,4 +44,4 @@ class StateFailed : public State {
 };
 
 
-#endif /* L_SeqStateAborted_H_ */
+#endif /* L_StateCancelled_H_ */

@@ -1,5 +1,5 @@
 /*
- * SeqStateRunning.cpp
+ * StateQueued.h
  *
  *  Created on: 07 may. 2021
  *
@@ -7,8 +7,8 @@
  *  Email: cguzwork@cguz.org
  */
 
-#ifndef L_StateRunning_H_
-#define L_StateRunning_H_
+#ifndef L_StateQueued_H_
+#define L_StateQueued_H_
 
 #include <iostream>
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #include "State.h"
 
 
-class StateRunning : public State {
+class StateQueued : public State {
 
 	//--------------------------------------------------
 	// public section
@@ -26,7 +26,7 @@ class StateRunning : public State {
 
 		//########################## CONSTRUCTOR & DESTRUCTOR #########################
 
-		StateRunning();
+		StateQueued();
 
 
 		//########################## METHODS TO TRANSICT #########################
@@ -37,12 +37,12 @@ class StateRunning : public State {
 
 		void pause(SequenceTasks* context);
 
-		void finish(SequenceTasks* context);
-
 		void fail(SequenceTasks* context);
+
+		void finish(SequenceTasks* context);
 
 
 };
 
 
-#endif /* L_StateRunning_H_ */
+#endif /* L_StateQueued_H_ */

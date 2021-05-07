@@ -1,5 +1,5 @@
 /*
- * SeqState.cpp
+ * SeqState.h
  *
  *  Created on: 07 may. 2021
  *

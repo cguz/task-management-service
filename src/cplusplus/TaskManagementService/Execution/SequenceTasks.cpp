@@ -9,8 +9,8 @@
 
 #include "SequenceTasks.h"
 
-#include "StateDesign/StateQueued.h"
-#include "StateDesign/StateRunning.h"
+#include "States/StateQueued.h"
+#include "States/StateRunning.h"
 
 
 

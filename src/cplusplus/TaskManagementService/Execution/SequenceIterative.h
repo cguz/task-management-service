@@ -15,7 +15,7 @@
 #include "ControlIterator.h"
 #include "ITask.h"
 #include "SequenceTasks.h"
-#include "StateDesign/State.h"
+#include "States/State.h"
 
 using namespace std;
 
