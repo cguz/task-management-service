@@ -30,7 +30,25 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 
 The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-management-service/tree/main/design)
 
-<img src="https://raw.githubusercontent.com/cguz/task-management-service/cf0e94b9e0b9cd48a27c5dfd90e71d97d41bca5c/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
+The class diagram is as follow:
+
+<img src="https://raw.githubusercontent.com/cguz/task-management-service/708bc7b59824075c9531412f4b65caf8285127cd/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
+  
+The state transition of a task is as follow:
+
+<img src="https://raw.githubusercontent.com/cguz/task-management-service/708bc7b59824075c9531412f4b65caf8285127cd/design/StateDiagram.svg" alt="State transition diagram" title="State transition diagram" height="400px" />
+
+The states are:
+
+* QUEUED : means that the tasks are planned for their execution.
+* RUNNING : means that the tasks are executing.
+* SUCCESS : means that the tasks finish successfully.
+* FAILED : means that the task fails during its execution.
+
+We added two more states:
+
+* CANCEL : means that the user cancels the task.
+* PAUSED : means that the task is stopped and can be resumed. 
   
 ## Development
 
