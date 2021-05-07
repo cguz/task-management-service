@@ -9,10 +9,16 @@
 
 #include "ITask.h"
 
+#include "States/StateQueued.h"
+#include "States/StateRunning.h"
+
 
 //################### CONSTRUCTOR ###################
 
 ITask::ITask(){
+
+	// initialize the state variable
+	setState(new StateRunning());
 }
 
 ITask::~ITask() {
@@ -20,7 +26,18 @@ ITask::~ITask() {
 }
 
 
-//################### METHODS ###################
+//########################## GETTERS AND SETTERS #######################################
+void ITask::setState ( State* state) {
+
+	this->state = state;
+
+}
+
+State* ITask::getState( ) {
+
+	return state;
+
+}
 
 void ITask::setName(string name) {
 	name_ = name;

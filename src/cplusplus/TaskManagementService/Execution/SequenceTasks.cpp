@@ -9,9 +9,6 @@
 
 #include "SequenceTasks.h"
 
-#include "States/StateQueued.h"
-#include "States/StateRunning.h"
-
 
 
 //################### CONSTRUCTOR ###################
@@ -25,34 +22,12 @@ SequenceTasks::SequenceTasks(string name, ControlIterator* ite) : ITask(), itera
 
 	// update the name of the sequence
 	setName(name);
-
-	// initialize the state variable
-	setState(new StateRunning());
 }
 
 SequenceTasks::~SequenceTasks() {
 	cout<< "\nDestructor of the class SequenceTasks";
 }
 
-
-//########################## GETTERS AND SETTERS #######################################
-//----------------------------------------------------------------------
-// Change the current state
-//----------------------------------------------------------------------
-void SequenceTasks::setState ( State* state) {
-
-	this->state = state;
-
-}
-
-//----------------------------------------------------------------------
-// Retrieve the current state
-//----------------------------------------------------------------------
-State* SequenceTasks::getState( ) {
-
-	return state;
-
-}
 
 
 

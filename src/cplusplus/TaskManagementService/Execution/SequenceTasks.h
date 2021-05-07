@@ -15,7 +15,6 @@
 
 #include "ControlIterator.h"
 #include "ITask.h"
-#include "States/State.h"
 
 using namespace std;
 
@@ -27,28 +26,12 @@ class SequenceTasks : public ITask {
 	public:
 
 		//################### CONSTRUCTOR ###################
-
 		SequenceTasks(string name, ControlIterator* iterate);
-
 		virtual ~SequenceTasks();
 
 
-		//########################## GETTERS AND SETTERS ############################
-
-		/**
-		* Update the current state
-		*/
-		void setState(State* state);
-
-		/**
-		* Retrieve the current state
-		*/
-		State* getState();
-
 
 		//################### METHODS ###################
-
-
 		void 	execute();
 		void 	cancel();
 		void 	pause();
@@ -63,9 +46,6 @@ class SequenceTasks : public ITask {
 
 
 	protected:
-
-		// current state of the Sequence
-		State* state;
 
 		// class to iterate through the tasks of a sequence
 		ControlIterator* iterate;

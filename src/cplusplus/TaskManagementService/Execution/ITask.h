@@ -11,6 +11,7 @@
 #define FACTORYPM_ITASK_H_
 
 #include <iostream>
+#include "States/State.h"
 
 
 using namespace std;
@@ -34,6 +35,18 @@ class ITask {
 
 
 
+		//########################## GETTERS AND SETTERS ############################
+
+		/**
+		* Update the current state
+		*/
+		void setState(State* state);
+
+		/**
+		* Retrieve the current state
+		*/
+		State* getState();
+
 		/**
 		 * Update the name of the Task or the Sequence Task
 		 */
@@ -49,6 +62,13 @@ class ITask {
 		 * Retrieve the ITask as a string
 		 */
 		string 	toString();
+
+
+	protected:
+
+		// current state of the Sequence
+		State* state;
+
 
 	private:
 
