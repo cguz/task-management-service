@@ -1,8 +1,8 @@
 # Task Management Service
 
-![image](https://user-images.githubusercontent.com/15159632/117484138-f7920900-af66-11eb-8def-6e9880860c4a.png)
+<center><a href="http://visionspace.com/"><img src="https://user-images.githubusercontent.com/15159632/117484138-f7920900-af66-11eb-8def-6e9880860c4a.png" alt="VisionSpace" title="VisionSpace" height="100px" /></a></center>
 
-Author: [Cesar Augusto Guzman Alvarez](https://github.com/cguz/)
+Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
 ## Description
 
@@ -24,8 +24,8 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 
 ## Design 
 
-![architecture](https://raw.githubusercontent.com/cguz/task-management-service/d641f146654b114cfcdb7c2f84192080cbe7e9c6/design/TaskManagementService.svg)
-
+<img src="https://raw.githubusercontent.com/cguz/task-management-service/d641f146654b114cfcdb7c2f84192080cbe7e9c6/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
+  
 ## Development
 
 The source code in C++ is in the 📁 "src/cplusplus/"
