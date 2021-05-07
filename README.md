@@ -28,11 +28,11 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 
 ## Design 
 
-The design is in the folder ( 📁 ) "design"
+The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-management-service/tree/main/design)
 
 <img src="https://raw.githubusercontent.com/cguz/task-management-service/d641f146654b114cfcdb7c2f84192080cbe7e9c6/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
   
 ## Development
 
-The source code in C++ is in the folder ( 📁 ) "src/cplusplus/"
+The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus)
 
