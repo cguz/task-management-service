@@ -22,7 +22,7 @@ SequenceTasksCatalogConstructor::SequenceTasksCatalogConstructor() {
 }
 
 SequenceTasksCatalogConstructor::~SequenceTasksCatalogConstructor() {
-	cout<< "\nDestructor of the class SequenceTasksConstructor (STC)";
+	cout<< "\nDestructor of the class SequenceTasksCatalogConstructor";
 }
 
 
@@ -32,7 +32,7 @@ SequenceTasksCatalogConstructor::~SequenceTasksCatalogConstructor() {
 
 void SequenceTasksCatalogConstructor::init(){
 
-	cout<< "\nInit of the class SequenceTasksConstructor (STC)";
+	cout<< "\nInit of the class SequenceTasksCatalogConstructor";
 
 	sequenceTasksFactoryCatalog[SEQ_TASKS_GROUP1] = new TasksGroup1Factory();
 	sequenceTasksFactoryCatalog[SEQ_TASKS_GROUP2] = new TasksGroup2Factory();

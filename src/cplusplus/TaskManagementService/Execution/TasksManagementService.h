@@ -46,7 +46,7 @@ class TasksManagementService {
 		 * @param sequence id
 		 * @param executable
 		 */
-		void setSequence(short seqId, ITask* executable);
+		void setSequenceTasks(short seqId, ITask* executable);
 
 		/**
 		 * Check is the sequence is initialized
@@ -59,7 +59,7 @@ class TasksManagementService {
 
 	private:
 
-		short _currentTask = -1;
+		short _currentSequenceTask = -1;
 
 		// Catalog of executable task or sequence tasks
 		unordered_map <short, ITask*> _tasksCatalog;

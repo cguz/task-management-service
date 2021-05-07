@@ -20,4 +20,6 @@ TaskIndexFile::TaskIndexFile() : Task() {
 void TaskIndexFile::execute() {
 	cout << endl << "Executing task Index file." << endl;
 	cout << endl << " ->  call methods() " << endl;
+
+	Task::simulateDuration();
 }

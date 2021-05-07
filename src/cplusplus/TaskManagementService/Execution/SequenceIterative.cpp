@@ -6,18 +6,18 @@
  *  Author: Cesar Augusto Guzman
  *  Email: cguzwork@cguz.org
  */
-#include "IterativeSequence.h"
+#include "SequenceIterative.h"
 
 
 
 //################### CONSTRUCTOR ###################
 
-IterativeSequence::IterativeSequence(string name, SequenceIterator* iterate)
+SequenceIterative::SequenceIterative(string name, ControlIterator* iterate)
 	: SequenceTasks(name, iterate) {
 
 }
 
-IterativeSequence::~IterativeSequence() {
+SequenceIterative::~SequenceIterative() {
 	cout<< "\nDestructor of the class IterativeSequence";
 }
 
@@ -26,7 +26,7 @@ IterativeSequence::~IterativeSequence() {
 
 //################### METHODS ###################
 
-void IterativeSequence::execute() {
+void SequenceIterative::execute() {
 
 	cout << "\nExecuting sequence.";
 
@@ -57,9 +57,4 @@ void IterativeSequence::execute() {
 		cout<< endl <<"[Error]" << endl;
 	}
 
-}
-
-
-string IterativeSequence::getParameters() {
-	return "get parameters of the IterativeSequence";
 }

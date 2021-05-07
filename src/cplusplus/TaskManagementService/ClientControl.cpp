@@ -38,7 +38,7 @@ void ClientControl::build() {
 void ClientControl::select(short Id) {
 
 	if(!_tasksManagement->isInitialized(Id)) {
-		_tasksManagement->setSequence(Id, _catalogConstructor->build(Id));
+		_tasksManagement->setSequenceTasks(Id, _catalogConstructor->build(Id));
 	}
 
 }

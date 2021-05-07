@@ -11,15 +11,27 @@
 
 
 Task::Task() : ITask() {
-
+	srand (31173);
 }
 
 
 //################### METHODS ###################
 
 void Task::execute() {
-	cout << endl << "Executing task." << endl;
-	cout << endl << " ->  call some method " << endl;
+
+	cout << endl << "Executing a general task." << endl;
+
+	simulateDuration();
+}
+
+void Task::simulateDuration(){
+
+	unsigned int microsecond = 1000000;
+	int duration = rand() % 5;
+
+	cout << endl << " ->  duration : " << duration << endl;
+
+	usleep(duration * microsecond);
 
 }
 
@@ -30,3 +42,4 @@ void Task::cancel() {
 void Task::pause() {
 	cout << endl << "The method pause() is not implemented." << endl;
 }
+

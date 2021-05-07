@@ -10,6 +10,9 @@
 #define FACTORYPM_TASK_H_
 
 #include <iostream>
+#include <stdlib.h>     /* srand, rand */
+#include<unistd.h>
+
 #include "ITask.h"
 
 using namespace std;
@@ -23,7 +26,6 @@ class Task : public ITask {
 
 		//################### CONSTRUCTOR ###################
 		Task();
-		// virtual ~Command();
 
 		//################### METHODS ###################
 
@@ -31,6 +33,9 @@ class Task : public ITask {
 		void 	cancel();
 		void 	pause();
 
+
+	protected:
+		void 	simulateDuration();
 
 };
 

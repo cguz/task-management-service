@@ -1,5 +1,5 @@
 /*
- * SequenceIterator.cpp
+ * ControlIterator.cpp
  *
  *  Created on: 07 may. 2021
  *
@@ -8,7 +8,7 @@
  */
 
 // Includes
-#include "SequenceIterator.h"
+#include "ControlIterator.h"
 
 #include <math.h>
 
@@ -17,19 +17,19 @@
 //----------------------------------------------------------------------
 // Constructor
 //----------------------------------------------------------------------
-SequenceIterator::SequenceIterator() {
+ControlIterator::ControlIterator() {
 	init();
 	totalNumberOfSteps_ = 0;
 	lastStep_ = totalNumberOfSteps_-1;
 }
 
-SequenceIterator::SequenceIterator(int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {
+ControlIterator::ControlIterator(int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {
 	init();
 	totalNumberOfSteps_ = 0;
 	lastStep_ = totalNumberOfSteps_-1;
 }
 
-SequenceIterator::SequenceIterator(long currentStep, int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {
+ControlIterator::ControlIterator(long currentStep, int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {
 	currentIteration_ = 0;
 	currentStepExecution_ = currentStep;
 	totalNumberOfSteps_=0;
@@ -38,93 +38,93 @@ SequenceIterator::SequenceIterator(long currentStep, int totalNumberIterations) 
 
 
 //########################## METHODS ############################
-void SequenceIterator::init()
+void ControlIterator::init()
 {
 	currentStepExecution_ = -1;
 	currentIteration_ = 0;
 }
 
-void SequenceIterator::begin()
+void ControlIterator::begin()
 {
 	currentStepExecution_ = 0;
 }
 
-void SequenceIterator::next()
+void ControlIterator::next()
 {
 	currentStepExecution_++;
 }
 
-void SequenceIterator::previous()
+void ControlIterator::previous()
 {
 	currentStepExecution_--;
 }
 
-void SequenceIterator::nextIteration()
+void ControlIterator::nextIteration()
 {
 	currentIteration_++;
 }
 
-void SequenceIterator::previousIteration()
+void ControlIterator::previousIteration()
 {
 	currentIteration_--;
 }
 
 
 //########################## GETTER & SETTERS ############################
-long SequenceIterator::getCurrentStepExecution()
+long ControlIterator::getCurrentStepExecution()
 {
 	return currentStepExecution_;
 }
 
-long SequenceIterator::getTotalNumberOfSteps()
+long ControlIterator::getTotalNumberOfSteps()
 {
 	return totalNumberOfSteps_;
 }
 
-long SequenceIterator::lastStep()
+long ControlIterator::lastStep()
 {
 	return lastStep_;
 }
 
-long SequenceIterator::getTotalNumberIterations()
+long ControlIterator::getTotalNumberIterations()
 {
 	return totalNumberIterations_;
 }
 
-void SequenceIterator::setCurrentStep(long currentStep)
+void ControlIterator::setCurrentStep(long currentStep)
 {
 	currentStepExecution_ = currentStep;
 }
 
-void SequenceIterator::setTotalNumberOfSteps(long totalNumberOfSteps)
+void ControlIterator::setTotalNumberOfSteps(long totalNumberOfSteps)
 {
 	totalNumberOfSteps_ = totalNumberOfSteps;
 	lastStep_ = totalNumberOfSteps_-1; //The index changes from 0 to totalNumberOfSteps_-1
 }
 
-void SequenceIterator::setTotalNumberIterations(long totalNumberIterations)
+void ControlIterator::setTotalNumberIterations(long totalNumberIterations)
 {
 	totalNumberIterations_ = totalNumberIterations;
 }
 
 
 //########################## METHODS TO VERIFY ############################
-bool SequenceIterator::isAllProcessCompleted()
+bool ControlIterator::isAllProcessCompleted()
 {
 	return  (isEnd() && isEndIterations());
 }
 
-bool SequenceIterator::isEnd()
+bool ControlIterator::isEnd()
 {
 	// cout << endl << "("<<stepExecution_<<" == "<<totalNumberOfSteps_<<")"<<endl;
 	return (currentStepExecution_ == totalNumberOfSteps_);
 }
 
-bool SequenceIterator::isEndIterations() {
+bool ControlIterator::isEndIterations() {
 	return (currentIteration_ == totalNumberIterations_);
 }
 
-bool SequenceIterator::isFirst()
+bool ControlIterator::isFirst()
 {
 	return (currentStepExecution_ == 0);
 }

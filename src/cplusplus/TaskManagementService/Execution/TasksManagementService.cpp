@@ -22,31 +22,31 @@ TasksManagementService::~TasksManagementService() {
 //################### METHODS ###################
 
 void TasksManagementService::execute() {
-	if (_currentTask == -1)
+	if (_currentSequenceTask == -1)
 		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
-	_tasksCatalog[_currentTask]->execute();
+	_tasksCatalog[_currentSequenceTask]->execute();
 }
 
 void TasksManagementService::cancel() {
-	if (_currentTask == -1)
+	if (_currentSequenceTask == -1)
 		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
-	_tasksCatalog[_currentTask]->cancel();
+	_tasksCatalog[_currentSequenceTask]->cancel();
 }
 
 void TasksManagementService::pause() {
-	if (_currentTask == -1)
+	if (_currentSequenceTask == -1)
 		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
-	_tasksCatalog[_currentTask]->pause();
+	_tasksCatalog[_currentSequenceTask]->pause();
 }
 
-void TasksManagementService::setSequence(short seqId, ITask* executable) {
+void TasksManagementService::setSequenceTasks(short Id, ITask* executable) {
 
-	_currentTask = seqId;
+	_currentSequenceTask = Id;
 
-	_tasksCatalog[_currentTask] = executable;
+	_tasksCatalog[_currentSequenceTask] = executable;
 
 }
 
-bool TasksManagementService::isInitialized(short seqId) {
-	return _tasksCatalog[seqId] != NULL;
+bool TasksManagementService::isInitialized(short Id) {
+	return _tasksCatalog[Id] != NULL;
 }

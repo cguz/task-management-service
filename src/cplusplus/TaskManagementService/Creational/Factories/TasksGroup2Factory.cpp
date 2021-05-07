@@ -26,9 +26,11 @@ TasksGroup2Factory::~TasksGroup2Factory() {
 ITask* TasksGroup2Factory::build() {
 
 	cout << "\nTasksGroup2Factory::build()";
+	cout << "\t - contains two Tasks"<<endl;
 
 
-	SequenceIterator* iterate = new SequenceIterator();
+	// the aim is twofold: 1) allow us to control the execution of the tasks and 2) allows to iterate one or more times the sequence tasks
+	ControlIterator* iterate = new ControlIterator();
 
 	SequenceTasks* sequence = new SequenceTasks("TasksGroup2", iterate);
 

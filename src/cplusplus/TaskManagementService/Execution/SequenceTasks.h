@@ -12,7 +12,8 @@
 
 #include <iostream>
 #include <vector>
-#include "SequenceIterator.h"
+
+#include "ControlIterator.h"
 #include "ITask.h"
 #include "StateDesign/State.h"
 
@@ -27,7 +28,7 @@ class SequenceTasks : public ITask {
 
 		//################### CONSTRUCTOR ###################
 
-		SequenceTasks(string name, SequenceIterator* iterate);
+		SequenceTasks(string name, ControlIterator* iterate);
 
 		virtual ~SequenceTasks();
 
@@ -54,16 +55,11 @@ class SequenceTasks : public ITask {
 
 
 		/**
-		 * Retrieve the sequence as a string
-		 */
-		string 	getParameters();
-
-		/**
-		 * Add an Task to the sequence
+		 * Add a Task to the sequence
 		 *
 		 * @param ITask to execute
 		 */
-		void 	add(ITask* exe);
+		void 	add(ITask* task);
 
 
 	protected:
@@ -72,12 +68,12 @@ class SequenceTasks : public ITask {
 		State* state;
 
 		// class to iterate through the tasks of a sequence
-		SequenceIterator* iterate;
+		ControlIterator* iterate;
 
 	private:
 
 		// list of tasks or sequence of tasks to execute
-		vector <ITask*> tasksList_;
+		vector <ITask*> _tasks;
 
 };
 

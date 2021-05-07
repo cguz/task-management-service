@@ -20,4 +20,6 @@ TaskBatchDataLoad::TaskBatchDataLoad() : Task() {
 void TaskBatchDataLoad::execute() {
 	cout << endl << "Executing task Batch Data Load." << endl;
 	cout << endl << " ->  call methods() " << endl;
+
+	Task::simulateDuration();
 }

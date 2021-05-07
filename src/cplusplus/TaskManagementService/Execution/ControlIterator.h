@@ -1,5 +1,5 @@
 /*
- * SequenceIterator.cpp
+ * ControlIterator.h
  *
  *  Created on: 07 may. 2021
  *
@@ -12,7 +12,6 @@
 // Includes
 #include <string>
 #include <iostream>
-// #include <Trace.h>
 
 using namespace std;
 
@@ -23,7 +22,7 @@ using namespace std;
  *   . last step
  *   . total number of repetitions
  */
-class SequenceIterator {
+class ControlIterator {
 
 	//-----------------------------------------------------------------
 	// private section
@@ -55,13 +54,13 @@ class SequenceIterator {
 
 
 		//####################### CONSTRUCTOR #####################
-		SequenceIterator();
+		ControlIterator();
 
 		// SequenceIterator(long totalNumberOfSteps);
 
-		SequenceIterator(int totalNumberIterations);
+		ControlIterator(int totalNumberIterations);
 
-		SequenceIterator(long currentStep, int totalNumberIterations);
+		ControlIterator(long currentStep, int totalNumberIterations);
 
 
 		//########################## METHODS ############################
@@ -103,7 +102,7 @@ class SequenceIterator {
 		// Method to set the total number of steps and the last step
 		void setTotalNumberOfSteps(long totalNumberOfSteps);
 
-		// Method to set the total number of iterationr
+		// Method to set the total number of iterator
 		void setTotalNumberIterations(long totalNumberIterations);
 
 

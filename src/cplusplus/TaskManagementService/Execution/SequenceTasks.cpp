@@ -17,7 +17,7 @@
 //################### CONSTRUCTOR ###################
 
 // the constructor also creates the variable to iterate through the tasks in the sequence of tasks
-SequenceTasks::SequenceTasks(string name, SequenceIterator* ite) : ITask(), iterate(ite) {
+SequenceTasks::SequenceTasks(string name, ControlIterator* ite) : ITask(), iterate(ite) {
 
 	// Sequence iterator
 	// NOTE This should be always a difference instance for a Sequence of tasks
@@ -59,7 +59,7 @@ State* SequenceTasks::getState( ) {
 //################### METHODS ###################
 
 void SequenceTasks::execute() {
-	cout << "\nExecuting SequenceTasks. State : "<<getState()->getId();
+	cout << "\nExecuting SequenceTasks. State : "<<getState()->toString()<<" ("<<getState()->getId()<<")";
 
 	ITask* e;
 
@@ -68,13 +68,13 @@ void SequenceTasks::execute() {
 		// we change the state of the sequence
 		getState()->execute(this);
 
-		// make iterate point to beginning and increment it one by one untill
+		// make iterate point to beginning and increment it one by one until
 		// i)  it reaches the end of list or
 		// ii) it changes its state
 		while(!iterate->isEnd() && getState()->isRunning()) {
 
 			// get the command to execute
-			e = *(tasksList_.begin()+iterate->getCurrentStepExecution());
+			e = *(_tasks.begin()+iterate->getCurrentStepExecution());
 
 			// execute the command
 			e->execute();
@@ -84,7 +84,7 @@ void SequenceTasks::execute() {
 
 		}
 
-		// finish();
+		getState()->finish(this);
 
 	} catch (...) {
 		cout<< endl <<"[Error]" << endl;
@@ -92,11 +92,11 @@ void SequenceTasks::execute() {
 }
 
 void SequenceTasks::cancel() {
-	cout << "\nAborting SequenceTasks.";
+	cout << "\nCancel the SequenceTasks.";
 
 	try {
 
-		getState()->fail(this);
+		getState()->cancel(this);
 
 	} catch (...) {
 		cout<< endl <<"[Error]" << endl;
@@ -114,14 +114,10 @@ void SequenceTasks::pause() {
 	}
 }
 
-string SequenceTasks::getParameters() {
-	return "get parameters of a normal SequenceTasks";
-}
-
 void SequenceTasks::add(ITask* exe) {
-	tasksList_.push_back(exe);
+	_tasks.push_back(exe);
 
 	// we change the total number of steps according to the list of commands
-	iterate->setTotalNumberOfSteps(tasksList_.size());
+	iterate->setTotalNumberOfSteps(_tasks.size());
 }
 

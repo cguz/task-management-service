@@ -14,7 +14,7 @@
 
 #include <iostream>
 
-#include "../../../Execution/IterativeSequence.h"
+#include "../../../Execution/SequenceIterative.h"
 #include "../../../Execution/Task.h"
 
 #include "../../Execution/TaskBatchDataLoad.h"
@@ -30,13 +30,13 @@ using namespace std;
  *
  * This class test the functionality with a dummy sequence tasks example
  */
-class CustomSeqNAME1Factory : public CustomSequenceFactory {
+class CustomSeqExampleTasksToExecuteFactory : public CustomSequenceFactory {
 
 	public:
 
 		//################### CONSTRUCTOR ###################
-		CustomSeqNAME1Factory();
-		virtual ~CustomSeqNAME1Factory();
+		CustomSeqExampleTasksToExecuteFactory();
+		virtual ~CustomSeqExampleTasksToExecuteFactory();
 
 
 		//################### METHODS ###################

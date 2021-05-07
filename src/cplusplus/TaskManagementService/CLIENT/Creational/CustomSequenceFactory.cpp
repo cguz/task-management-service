@@ -14,9 +14,6 @@
 
 CustomSequenceFactory::CustomSequenceFactory() {
 
-	// cout<< "\nConstructor CustomSequenceFactory";
-
-
 }
 
 CustomSequenceFactory::~CustomSequenceFactory() {

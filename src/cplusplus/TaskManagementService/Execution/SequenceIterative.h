@@ -12,8 +12,8 @@
 #include <iostream>
 #include <vector>
 
+#include "ControlIterator.h"
 #include "ITask.h"
-#include "SequenceIterator.h"
 #include "SequenceTasks.h"
 #include "StateDesign/State.h"
 
@@ -22,25 +22,19 @@ using namespace std;
 /**
  * Composite of an Iterative Sequence to execute
  */
-class IterativeSequence : public SequenceTasks {
+class SequenceIterative : public SequenceTasks {
 
 	public:
 
 		//################### CONSTRUCTOR ###################
 
-		IterativeSequence(string name, SequenceIterator* iterate);
-		~IterativeSequence();
+		SequenceIterative(string name, ControlIterator* iterate);
+		~SequenceIterative();
 
 
 		//################### METHODS ###################
 
 		void execute();
-
-
-		/**
-		 * Retrieve the sequence as a string
-		 */
-		string 	getParameters();
 
 };
 

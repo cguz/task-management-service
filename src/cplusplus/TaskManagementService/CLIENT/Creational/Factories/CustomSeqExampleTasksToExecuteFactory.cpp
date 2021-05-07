@@ -8,33 +8,33 @@
  */
 
 
-#include "CustomSeqNAME1Factory.h"
+#include "CustomSeqExampleTasksToExecuteFactory.h"
 
 class Task;
 
 //################### CONSTRUCTOR ###################
 
-CustomSeqNAME1Factory::CustomSeqNAME1Factory() : CustomSequenceFactory(){
+CustomSeqExampleTasksToExecuteFactory::CustomSeqExampleTasksToExecuteFactory() : CustomSequenceFactory(){
 	cout << endl << "Constructor CustomSeqNAME1Factory";
 }
 
-CustomSeqNAME1Factory::~CustomSeqNAME1Factory() {
+CustomSeqExampleTasksToExecuteFactory::~CustomSeqExampleTasksToExecuteFactory() {
 	cout << endl << "Destructor of the class CustomSeqNAME1Factory";
 }
 
 
 //################### METHODS ###################
 
-ITask* CustomSeqNAME1Factory::build() {
+ITask* CustomSeqExampleTasksToExecuteFactory::build() {
 
 	cout << "\nExecute CustomSeqNAME1Factory::build()";
 	cout << endl << "Iterative Sequence.";
 
 
-	SequenceIterator* iterate = new SequenceIterator(1);
+	ControlIterator* iterate = new ControlIterator(1);
 
 	// input parameters are : name of the sequence, total number of commands to execute and total number of repetitions of the execution
-	SequenceTasks* sequence = new IterativeSequence("CustomSeqNAME1Factory", iterate);
+	SequenceTasks* sequence = new SequenceIterative("CustomSeqNAME1Factory", iterate);
 
 	sequence->add(new TaskBatchDataLoad());
 	sequence->add(new TaskIndexFile());

@@ -23,20 +23,20 @@ using namespace std;
 /**
  * Class to create a Custom catalog of sequence tasks
  */
-class CustomSequenceCatalogConstructor : public SequenceTasksCatalogConstructor {
+class CustomSequenceTasksCatalogConstructor : public SequenceTasksCatalogConstructor {
 
 
 	public:
 
 		//################### CONSTRUCTOR ###################
-		CustomSequenceCatalogConstructor();
-		virtual ~CustomSequenceCatalogConstructor();
+		CustomSequenceTasksCatalogConstructor();
+		virtual ~CustomSequenceTasksCatalogConstructor();
 
 
 		//################### GLOBAL ENUMERATE ###################
 
 		// In our case we inherits the factories
-		enum FRIDASequenceFactoryIds {
+		enum CustomSequenceFactoryIds {
 			SEQ_CUSTOM1 = SEQ_TASKS_GROUP2+1, SEQ_CUSTOM2
 		};
 

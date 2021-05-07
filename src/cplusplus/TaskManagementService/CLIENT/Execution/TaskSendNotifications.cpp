@@ -20,4 +20,6 @@ TaskSendNotifications::TaskSendNotifications() : Task() {
 void TaskSendNotifications::execute() {
 	cout << endl << "Executing task send notifications." << endl;
 	cout << endl << " ->  call methods() " << endl;
+
+	Task::simulateDuration();
 }
