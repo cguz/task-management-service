@@ -2,6 +2,10 @@
 [![eclipse](https://img.shields.io/badge/Eclipse-2020%E2%80%9112-orange)](https://www.eclipse.org) 
 
 
+# Requirements
+
+* Eclipse IDE for C/C++ Version: 2021-03 (4.19.0)
+
 # Code
 
 The code is in the folder ( 📁 ) "TaskManegementService". 
