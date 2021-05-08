@@ -1,6 +1,7 @@
 BUILDER=g++
 TARGET=ControlClient
-DIR=TaskManagementService/
+PROJECT=TasksManagementService
+DIR=src/$(PROJECT)/
 
 all: build
 
@@ -9,3 +10,6 @@ build:
 
 execute:
 	./$(TARGET)
+
+IntegrationTest:
+	cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" && make all && ./tests/$(PROJECT)_test
