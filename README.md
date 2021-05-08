@@ -85,6 +85,4 @@ The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://gith
 
 Since the repository contains submodules (google test library), please, clone the repository as follow:
 
-    git clone --recurse-submodules -j8 https://github.com/cguz/task-management-service.git cd bar
-
-
+    git clone --recurse-submodules -j8 https://github.com/cguz/task-management-service.git
