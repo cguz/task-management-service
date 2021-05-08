@@ -150,7 +150,7 @@ void testClientTasks() {
 
 		controlClient->add(new TaskIndexFile());
 
-		controlClient->execute();
+		controlClient->cancel();
 
 		cout << "\n\n-----------------------------------------";
 		cout << "\n4. END The execution of SEQ_CUSTOM1";

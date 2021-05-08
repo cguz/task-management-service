@@ -91,11 +91,19 @@ void SequenceTasks::execute() {
 }
 
 void SequenceTasks::cancel() {
-	cout << "\nCancel the SequenceTasks.";
+	cout << "\nCancel the current task in execution.";
+
+	ITask* e;
 
 	try {
 
-		getState()->cancel(this);
+		// get the task in execution
+		e = *(_tasks.begin()+iterate->getCurrentStepExecution());
+
+		// change the state of the task
+		e->getState()->cancel(this);
+
+		// getState()->cancel(this);
 
 	} catch (...) {
 		cout<< endl <<"[Error]" << endl;
@@ -103,9 +111,19 @@ void SequenceTasks::cancel() {
 }
 
 void SequenceTasks::pause() {
-	cout << "\nPausing SequenceTasks.";
+	cout << "\nPausing the current task in execution.";
+
+	ITask* e;
+
 	try {
 
+		// get the task in execution
+		e = *(_tasks.begin()+iterate->getCurrentStepExecution());
+
+		// change the state of the task
+		e->getState()->pause(this);
+
+		// pause the complete sequence
 		getState()->pause(this);
 
 	} catch (...) {

@@ -2,6 +2,7 @@
 
 
 #include "TasksManagementService/CLIENT/Creational/CustomSequenceTasksCatalogConstructor.h"
+#include "TasksManagementService/CLIENT/Execution/TaskIndexFile.h"
 #include "TasksManagementService/Creational/SequenceTasksCatalogConstructor.h"
 #include "TasksManagementService/ClientControl.h"
 
@@ -144,6 +145,10 @@ bool testClientTasks() {
 		cout << "\n--------------------------------------------" << endl;
 
 		controlClient->execute();
+
+		controlClient->add(new TaskIndexFile());
+
+		controlClient->cancel();
 
 		cout << "\n\n-----------------------------------------";
 		cout << "\n4. END The execution of SEQ_CUSTOM1";
