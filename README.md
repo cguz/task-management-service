@@ -30,13 +30,13 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 
 The proposed solution not only meets the requirements but also implements the following new functionalities:
 
-[X] Execute a task and/or a set of tasks.
-[X] Execute a task instantly or scheduled for later execution if more tasks are executing.
-[X] Prepare before execution the task or set of tasks to execute.
-[X] Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
-[X] Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
-[X] Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
-[X] Add two more states, CANCEL, and PAUSE (explained later).
+* Execute a task and/or a set of tasks.
+* Execute a task instantly or scheduled for later execution if more tasks are executing.
+* Prepare before execution the task or set of tasks to execute.
+* Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
+* Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
+* Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
+* Add two more states, CANCEL, and PAUSE (explained later).
 
 
 ### Design
