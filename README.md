@@ -37,6 +37,7 @@ The proposed solution not only meets the requirements but also implements the fo
 * Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
 * Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
 * Add two more states, CANCEL, and PAUSE (explained later).
+* Implement integration test. The Unit test can be implemented similarl way.
 
 
 ### Design
