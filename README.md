@@ -26,18 +26,20 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 * Send notifications.
 
 
-## Design 
+## Solution 
 
-The proposed design not only meets the requirements, but ialso implements the following new functionalities:
+The proposed solution not only meets the requirements but also implements the following new functionalities:
 
 * Execute a task and/or a set of tasks.
-* Execute a task instantly or scheduled for later execution if there are more tasks executing.
-* Prepare before execution the task or set of task to execute.
+* Execute a task instantly or scheduled for later execution if more tasks are executing.
+* Prepare before execution the task or set of tasks to execute.
 * Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
 * Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
-* Separate the task generation from the task execution. Allowing to add more tasks and monitor its execution easily.
-* Add two more states, CANCEL and PAUSE (explained later).
+* Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
+* Add two more states, CANCEL, and PAUSE (explained later).
 
+
+### Design
 
 The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-management-service/tree/main/design)
 
