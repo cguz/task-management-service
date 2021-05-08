@@ -49,13 +49,19 @@ The following rules are in the Makefile. They can be run automatically from ecli
 
 ## build
 
-g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
+Compile the source code
+
+    g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
 
 
 ## run
 
-  ./ControlClient
+Execute the main of the ControlClient 
+
+    ./ControlClient
 
 ## integrationTest
 
-  cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" && make all && ./tests/TasksManagementService_test
+Compile and execute all the integration tests.
+
+    cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" && make all && ./tests/TasksManagementService_test
