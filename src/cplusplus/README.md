@@ -41,6 +41,11 @@ The code is in the folder ( 📁 ) ["TaskManegementService"](https://github.com/
 
 The following rules are in the Makefile. They can be run automatically from eclipse. 
 
+The folder ( 📁 ) ["build"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus/build) is necessary to execute the **IntegrationTest**.
+
+To execute the **build** and **execute** command of the makefile please remove the folder ( 📁 ) "build". 
+
+
 ## Makefile
 
 - [build](#build)

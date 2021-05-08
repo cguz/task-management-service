@@ -37,6 +37,7 @@ The proposed solution not only meets the requirements but also implements the fo
 * Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
 * Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
 * Add two more states, CANCEL, and PAUSE (explained later).
+* Implement integration test. The Unit test can be implemented similarl way.
 
 
 ### Design
@@ -45,7 +46,7 @@ The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-man
 
 The class diagram is as follow:
 
-<img src="https://user-images.githubusercontent.com/15159632/117512725-79e2f300-af90-11eb-8bde-8a369c86bd32.png" alt="Architecture" title="Architecture" height="600px" />
+<img src="https://raw.githubusercontent.com/cguz/task-management-service/4fb73a3c4c544c2f0ba223eb7c79e6f2c941b626/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
 
 **ClientControl** class creates tasks sequence and executes one task or a set of tasks (tasks sequence).
 
