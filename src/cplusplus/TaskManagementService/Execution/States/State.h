@@ -15,7 +15,7 @@
 #include <iostream>
 
 // forward declaration
-class SequenceTasks;
+class ITask;
 
 using namespace std;
 
@@ -34,11 +34,11 @@ class State {
 
 
 		//########################## METHODS TO TRANSICT ############################
-		virtual void execute(SequenceTasks* context);
-		virtual void cancel(SequenceTasks* context);
-		virtual void pause(SequenceTasks* context);
-		virtual void finish(SequenceTasks* context);
-		virtual void fail(SequenceTasks* context);
+		virtual void execute(ITask* context);
+		virtual void cancel(ITask* context);
+		virtual void pause(ITask* context);
+		virtual void finish(ITask* context);
+		virtual void fail(ITask* context);
 
 
 

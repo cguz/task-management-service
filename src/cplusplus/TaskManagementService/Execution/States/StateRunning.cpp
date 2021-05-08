@@ -28,19 +28,19 @@ StateRunning::StateRunning() {
 
 
 
-void StateRunning::execute(SequenceTasks* context) {
+void StateRunning::execute(ITask* context) {
 
 	cout << "\nThe component is already in the state "<<_name<<"!\n";
 
 }
 
-void StateRunning::cancel(SequenceTasks* context) {
+void StateRunning::cancel(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from StateRunning to Cancelled!\n";
 
 }
 
-void StateRunning::finish(SequenceTasks* context) {
+void StateRunning::finish(ITask* context) {
 
 	State* nextState = new StateSuccess();
 	printf("\n\n->Go to state %s\n", nextState->toString().c_str());
@@ -49,7 +49,7 @@ void StateRunning::finish(SequenceTasks* context) {
 
 }
 
-void StateRunning::pause(SequenceTasks* context) {
+void StateRunning::pause(ITask* context) {
 
 	State* nextState = new StatePaused();
 	printf("\n\n-> go to state %s\n", nextState->toString().c_str());
@@ -58,7 +58,7 @@ void StateRunning::pause(SequenceTasks* context) {
 
 }
 
-void StateRunning::fail(SequenceTasks* context) {
+void StateRunning::fail(ITask* context) {
 
 	State* nextState = new StateFailed();
 	printf("\n->Go to state %s\n", nextState->toString().c_str());

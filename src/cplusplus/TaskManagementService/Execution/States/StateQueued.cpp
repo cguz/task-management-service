@@ -27,7 +27,7 @@ StateQueued::StateQueued() {
 
 //########################## METHODS TO TRANSICT #########################
 
-void StateQueued::execute(SequenceTasks* context) {
+void StateQueued::execute(ITask* context) {
 
 	State* nextState = new StateRunning();
 	printf("\n\n->Go to state %s\n", nextState->toString().c_str());
@@ -35,7 +35,7 @@ void StateQueued::execute(SequenceTasks* context) {
 	delete this;
 }
 
-void StateQueued::cancel(SequenceTasks* context) {
+void StateQueued::cancel(ITask* context) {
 
 	State* nextState = new StateCancelled();
 	printf("\n\n->Go to state %s\n", nextState->toString().c_str());
@@ -44,21 +44,21 @@ void StateQueued::cancel(SequenceTasks* context) {
 
 }
 
-void StateQueued::pause(SequenceTasks* context) {
+void StateQueued::pause(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
-
-}
-
-void StateQueued::fail(SequenceTasks* context) {
-
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from state StateQueued to Paused!\n";
 
 }
 
-void StateQueued::finish(SequenceTasks* context) {
+void StateQueued::fail(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from state StateQueued to Failed!\n";
+
+}
+
+void StateQueued::finish(ITask* context) {
+
+	cout << "throw WrongState No possible transition from state StateQueued to Success!\n";
 
 }
 

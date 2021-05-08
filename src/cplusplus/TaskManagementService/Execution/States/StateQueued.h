@@ -13,7 +13,7 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "../SequenceTasks.h"
+#include "../ITask.h"
 #include "State.h"
 
 
@@ -31,15 +31,15 @@ class StateQueued : public State {
 
 		//########################## METHODS TO TRANSICT #########################
 
-		void execute(SequenceTasks* context);
+		void execute(ITask* context);
 
-		void cancel(SequenceTasks* context);
+		void cancel(ITask* context);
 
-		void pause(SequenceTasks* context);
+		void pause(ITask* context);
 
-		void fail(SequenceTasks* context);
+		void fail(ITask* context);
 
-		void finish(SequenceTasks* context);
+		void finish(ITask* context);
 
 
 };

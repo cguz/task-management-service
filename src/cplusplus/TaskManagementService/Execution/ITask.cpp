@@ -18,7 +18,10 @@
 ITask::ITask(){
 
 	// initialize the state variable
-	setState(new StateRunning());
+	setState(new StateQueued());
+
+	srand (31173);
+
 }
 
 ITask::~ITask() {
@@ -53,3 +56,15 @@ string ITask::toString() {
 	return name_;
 }
 
+
+
+void ITask::wait(){
+
+	unsigned int microsecond = 1000000;
+	int duration = rand() % 3;
+
+	cout << endl << " ->  wait : " << duration << " seconds" <<endl;
+
+	usleep(duration * microsecond);
+
+}

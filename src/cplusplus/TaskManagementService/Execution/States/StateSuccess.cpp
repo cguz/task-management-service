@@ -22,33 +22,33 @@ StateSuccess::StateSuccess() {
 
 //########################## METHODS TO TRANSICT #########################
 
-void StateSuccess::cancel(SequenceTasks* context) {
+void StateSuccess::cancel(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
-
-}
-
-void StateSuccess::execute(SequenceTasks* context) {
-
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from Success to Cancelled!\n";
 
 }
 
-void StateSuccess::pause(SequenceTasks* context) {
+void StateSuccess::execute(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
-
-}
-
-void StateSuccess::fail(SequenceTasks* context) {
-
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from Success to Running!\n";
 
 }
 
-void StateSuccess::finish(SequenceTasks* context) {
+void StateSuccess::pause(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from Success to Paused!\n";
+
+}
+
+void StateSuccess::fail(ITask* context) {
+
+	cout << "throw WrongState No possible transition from Success to Failed!\n";
+
+}
+
+void StateSuccess::finish(ITask* context) {
+
+	cout << "throw WrongState No possible transition from Success to Success!\n";
 
 }
 

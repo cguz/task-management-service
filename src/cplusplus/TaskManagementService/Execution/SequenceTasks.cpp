@@ -48,11 +48,35 @@ void SequenceTasks::execute() {
 		// ii) it changes its state
 		while(!iterate->isEnd() && getState()->isRunning()) {
 
-			// get the command to execute
+			// get the task to execute
 			e = *(_tasks.begin()+iterate->getCurrentStepExecution());
 
-			// execute the command
-			e->execute();
+			// executed the task if it is queued
+			if (e->getState()->isQueued()){
+
+				{
+					// if the task is paused, we wait
+					while(e->getState()->isPaused()){
+						ITask::wait();
+					}
+
+					// change the state of the task to execute
+					e->getState()->execute(e);
+
+					// execute the task
+					e->execute();
+
+				}while(e->getState()->isPaused());
+
+				// if the user did not cancel the task
+				if (!e->getState()->isCanceled()){
+
+					// change the state of the task to finish
+					e->getState()->finish(e);
+
+				}
+			}
+
 
 			// increase the current index execution
 			iterate->next();

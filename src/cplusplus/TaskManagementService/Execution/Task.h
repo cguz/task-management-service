@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <stdlib.h>     /* srand, rand */
-#include<unistd.h>
+#include <unistd.h>
 
 #include "ITask.h"
 
@@ -36,6 +36,7 @@ class Task : public ITask {
 
 	protected:
 		void 	simulateDuration();
+		bool 	simulateFailure();
 
 };
 

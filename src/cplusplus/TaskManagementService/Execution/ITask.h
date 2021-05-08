@@ -11,6 +11,8 @@
 #define FACTORYPM_ITASK_H_
 
 #include <iostream>
+#include <stdlib.h>     /* srand, rand */
+#include <unistd.h>
 #include "States/State.h"
 
 
@@ -33,6 +35,7 @@ class ITask {
 		virtual void 	cancel()=0;
 		virtual void 	pause()=0;
 
+		void 			wait();
 
 
 		//########################## GETTERS AND SETTERS ############################

@@ -29,9 +29,18 @@ void Task::simulateDuration(){
 	unsigned int microsecond = 1000000;
 	int duration = rand() % 5;
 
-	cout << endl << " ->  duration : " << duration << endl;
+	cout << endl << " ->  duration : " << duration << " seconds" << endl;
 
 	usleep(duration * microsecond);
+
+}
+
+bool Task::simulateFailure(){
+
+	unsigned int microsecond = 1000000;
+	int failure = rand() % 100;
+
+	return (failure <= 5)? true: false;
 
 }
 

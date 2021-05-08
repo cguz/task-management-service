@@ -24,13 +24,13 @@ StatePaused::StatePaused() {
 
 //########################## METHODS TO TRANSICT #########################
 
-void StatePaused::pause(SequenceTasks* context) {
+void StatePaused::pause(ITask* context) {
 
 	cout << "\nThe component is already in the state "<<_name<<"!\n";
 
 }
 
-void StatePaused::cancel(SequenceTasks* context) {
+void StatePaused::cancel(ITask* context) {
 
 	State* nextState = new StateCancelled();
 	printf("\n->Go to state %s\n", nextState->toString().c_str());
@@ -39,7 +39,7 @@ void StatePaused::cancel(SequenceTasks* context) {
 
 }
 
-void StatePaused::execute(SequenceTasks* context) {
+void StatePaused::execute(ITask* context) {
 
 	State* nextState = new StateRunning();
 	printf("\n->Go to state %s\n", nextState->toString().c_str());
@@ -48,15 +48,15 @@ void StatePaused::execute(SequenceTasks* context) {
 
 }
 
-void StatePaused::fail(SequenceTasks* context) {
+void StatePaused::fail(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from StatePaused to Failed!\n";
 
 }
 
-void StatePaused::finish(SequenceTasks* context) {
+void StatePaused::finish(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from StatePaused to Success!\n";
 
 }
 

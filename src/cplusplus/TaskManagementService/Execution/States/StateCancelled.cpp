@@ -23,31 +23,31 @@ StateCancelled::StateCancelled() {
 
 //########################## METHODS TO TRANSICT #########################
 
-void StateCancelled::execute(SequenceTasks* context) {
+void StateCancelled::execute(ITask* context) {
 
 	cout << "throw WrongState No possible transition!\n";
 
 }
 
-void StateCancelled::cancel(SequenceTasks* context) {
+void StateCancelled::cancel(ITask* context) {
 
 	cout << "\nThe component is already in the state "<<_name<<"!\n";
 
 }
 
-void StateCancelled::pause(SequenceTasks* context) {
+void StateCancelled::pause(ITask* context) {
 
 	cout << "throw WrongState No possible transition!\n";
 
 }
 
-void StateCancelled::finish(SequenceTasks* context) {
+void StateCancelled::finish(ITask* context) {
 
 	cout << "throw WrongState No possible transition!\n";
 
 }
 
-void StateCancelled::fail(SequenceTasks* context) {
+void StateCancelled::fail(ITask* context) {
 
 	cout << "throw WrongState No possible transition!\n";
 

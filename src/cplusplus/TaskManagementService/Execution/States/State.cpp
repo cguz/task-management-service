@@ -21,33 +21,33 @@ using namespace std;
 
 //########################## METHODS TO TRANSICT ############################
 
-void State::execute(SequenceTasks* context) {
+void State::execute(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
-
-}
-
-void State::cancel(SequenceTasks* context) {
-
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from state State!\n";
 
 }
 
-void State::pause(SequenceTasks* context) {
+void State::cancel(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
-
-}
-
-void State::finish(SequenceTasks* context) {
-
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from state State!\n";
 
 }
 
-void State::fail(SequenceTasks* context) {
+void State::pause(ITask* context) {
 
-	cout << "throw WrongState No possible transition!\n";
+	cout << "throw WrongState No possible transition from state State!\n";
+
+}
+
+void State::finish(ITask* context) {
+
+	cout << "throw WrongState No possible transition from state State!\n";
+
+}
+
+void State::fail(ITask* context) {
+
+	cout << "throw WrongState No possible transition from state State!\n";
 
 }
 
