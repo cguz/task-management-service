@@ -36,7 +36,7 @@ The class diagram is as follow:
   
 The state transition of a task is as follow:
 
-<img src="https://raw.githubusercontent.com/cguz/task-management-service/708bc7b59824075c9531412f4b65caf8285127cd/design/StateDiagram.svg" alt="State transition diagram" title="State transition diagram" height="400px" />
+<img src="https://raw.githubusercontent.com/cguz/task-management-service/b4911a248339fdd3fadec891f4efc77b691dc474/design/StateDiagram.svg" alt="State transition diagram" title="State transition diagram" height="400px" />
 
 The states are:
 
