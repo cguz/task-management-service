@@ -118,5 +118,12 @@ void SequenceTasks::add(ITask* exe) {
 
 	// we change the total number of steps according to the list of commands
 	iterate->setTotalNumberOfSteps(_tasks.size());
+
+	cout << "\nAdding new task to execute.";
+
+	if (getState()->isSuccess()){
+
+		setState(new StateQueued());
+	}
 }
 

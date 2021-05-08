@@ -14,6 +14,7 @@
 #include <vector>
 
 #include "ControlIterator.h"
+#include "States/StateQueued.h"
 #include "ITask.h"
 
 using namespace std;

@@ -10,9 +10,10 @@
 #pragma hdrstop
 
 #include "CLIENT/Creational/CustomSequenceTasksCatalogConstructor.h"
+#include "CLIENT/Execution/TaskIndexFile.h"
 #include "Creational/SequenceTasksCatalogConstructor.h"
 #include "ClientControl.h"
-// #include <thread>
+#include <thread>
 
 
 //# global variables
@@ -144,6 +145,10 @@ void testClientTasks() {
 		cout << "\n\n--------------------------------------------";
 		cout << "\n4. START The execution of SEQ_CUSTOM1 ";
 		cout << "\n--------------------------------------------" << endl;
+
+		controlClient->execute();
+
+		controlClient->add(new TaskIndexFile());
 
 		controlClient->execute();
 

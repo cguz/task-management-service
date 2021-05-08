@@ -50,3 +50,11 @@ void TasksManagementService::setSequenceTasks(short Id, ITask* executable) {
 bool TasksManagementService::isInitialized(short Id) {
 	return _tasksCatalog[Id] != NULL;
 }
+
+void TasksManagementService::add(ITask* task){
+
+	if (_currentSequenceTask == -1)
+		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
+	SequenceTasks* tasks = (SequenceTasks*) _tasksCatalog[_currentSequenceTask];
+	tasks->add(task);
+}

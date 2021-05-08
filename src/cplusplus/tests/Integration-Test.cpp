@@ -1,9 +1,9 @@
 #include "gtest/gtest.h"
 
 
-#include "TaskManagementService/CLIENT/Creational/CustomSequenceTasksCatalogConstructor.h"
-#include "TaskManagementService/Creational/SequenceTasksCatalogConstructor.h"
-#include "TaskManagementService/ClientControl.h"
+#include "TasksManagementService/CLIENT/Creational/CustomSequenceTasksCatalogConstructor.h"
+#include "TasksManagementService/Creational/SequenceTasksCatalogConstructor.h"
+#include "TasksManagementService/ClientControl.h"
 
 //# global variables
 SequenceTasksCatalogConstructor* sequenceTasks;

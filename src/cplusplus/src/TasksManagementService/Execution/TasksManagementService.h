@@ -16,6 +16,7 @@
 #include <unordered_map>
 #include <vector>
 #include "ITask.h"
+#include "SequenceTasks.h"
 
 using namespace std;
 
@@ -56,6 +57,12 @@ class TasksManagementService {
 		 */
 		bool isInitialized(short seqId);
 
+		/**
+		 * Add the task for its execution
+		 *
+		 * @param task to execute
+		 */
+		void add(ITask* task);
 
 	private:
 

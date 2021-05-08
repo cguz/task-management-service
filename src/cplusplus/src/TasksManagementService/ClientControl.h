@@ -17,6 +17,7 @@
 
 #include "Creational/SequenceTasksCatalogConstructor.h"
 #include "Execution/TasksManagementService.h"
+#include "Execution/ITask.h"
 
 using namespace std;
 
@@ -49,6 +50,11 @@ class ClientControl {
 		 * @param sequence id
 		 */
 		void select(short seqId);
+
+		/**
+		 * Add the ITask to execution
+		 */
+		void add(ITask* task);
 
 		/**
 		 * Retrieves a list of sequence ids

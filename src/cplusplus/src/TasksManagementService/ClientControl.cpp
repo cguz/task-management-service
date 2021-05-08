@@ -43,6 +43,10 @@ void ClientControl::select(short Id) {
 
 }
 
+void ClientControl::add(ITask* task){
+	_tasksManagement->add(task);
+}
+
 void ClientControl::execute() {
 	_tasksManagement->execute();
 }
