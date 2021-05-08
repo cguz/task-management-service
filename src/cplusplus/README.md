@@ -11,19 +11,23 @@
 The code is in the folder ( 📁 ) ["TaskManegementService"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus/TaskManagementService).
 
 
-The following two rules are in the Makefile
+The following rules are in the Makefile
 
 ## Makefile
 
 - [build](#build)
 - [run](#run)
+- [IntegrationTest](#IntegrationTest)
 
 ## build
 
-g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/*/*.cpp TaskManagementService/*/*/*.cpp TaskManagementService/*/*/*/*.cpp
+g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
 
 
 ## run
 
-./ControlClient
+  ./ControlClient
 
+## IntegrationTest
+
+  cd build && cmake .. -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" && make all && ./tests/TasksManagementService_test
