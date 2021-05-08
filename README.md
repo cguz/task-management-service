@@ -81,5 +81,10 @@ We added two more states:
   
 ## Development
 
-The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus)
+The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus). Here, we have all the computational requirements.
+
+Since the repository contains submodules (google test library), please, clone the repository as follow:
+
+    git clone --recurse-submodules -j8 https://github.com/cguz/task-management-service.git cd bar
+
 
