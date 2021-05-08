@@ -1,6 +1,6 @@
 BUILDER=g++
 TARGET=ControlClient
-DIR=TaskManagementService/
+DIR=src/TaskManagementService/
 
 all: build
 
