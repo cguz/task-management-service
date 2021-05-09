@@ -4,7 +4,6 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/79bf6932c2e844eea15d0fb1ed7e415c)](https://app.codacy.com/gh/cguz/task-management-service?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ESMValGroup/ESMValTool&amp;utm_campaign=Badge_Grade)
 
 
-
 # Task Management Service
 
 <center><a href="http://visionspace.com/"><img src="https://user-images.githubusercontent.com/15159632/117484138-f7920900-af66-11eb-8def-6e9880860c4a.png" alt="VisionSpace" title="VisionSpace" height="100px" /></a></center>
@@ -12,21 +11,24 @@
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
 ## Description
+
 The goal of this service is to handle the execution of multiple types of Tasks. 
 
 ### Requirements
+
 *   A Task can be executed instantly or can be scheduled for later execution;
 *   A Task can be in one of the following states: QUEUED, RUNNING, SUCCESS, FAILED;
 *   Failed Tasks shall not have any side effects;
 *   A user can cancel Tasks using the Task Management Service.
 
 ### Examples of the Tasks to execute
+
 *   Batch data load to a data warehouse;
 *   Index files;
 *   Send notifications.
 
-
 ## Solution
+
 The proposed solution not only meets the requirements but also implements the following new functionalities:
 
 *   Execute a task and/or a set of tasks.
