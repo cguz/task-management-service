@@ -58,7 +58,7 @@ The **ClientControl** generates the tasks sequence through the class  **Sequence
 
 We implemented the **SequenceTasks** (tasks sequence), **Task**, and **ITask** classes using the composite pattern. This pattern allows us to treat the **SequenceTasks** and **Task** classes as a single instance of the same **ITask** class. 
 
-The **SequenceTasks** class controls the iteration of the tasks throughout the private variable **iterate**, which is an instance of the **ControllIterator** class. The **ControllIterator** class allows easy tracking of the current and previous tasks executed. 
+The **SequenceTasks** class controls the iteration of the tasks throughout the private variable **iterate**, which is an instance of the **ControllIterator** class. The **ControllIterator** class allows easy tracking of the current and previous tasks executed. The **SequenceTasks** class works like a queue.
 
 The **TaskSendNotifications**, **TaskIndexFiles**, and **TaskBatchDataLoad** classes inherit from the class **Task** and implement Examples of the Tasks to execute Batch data load to a data warehouse; Index files; and Send notifications, respectively.
 
