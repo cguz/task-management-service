@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+#include <thread>
 
 #include "Creational/SequenceTasksCatalogConstructor.h"
 #include "Execution/TasksManagementService.h"

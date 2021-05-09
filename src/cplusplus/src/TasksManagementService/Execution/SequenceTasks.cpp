@@ -34,72 +34,58 @@ SequenceTasks::~SequenceTasks() {
 //################### METHODS ###################
 
 void SequenceTasks::execute() {
-	cout << "\nExecuting SequenceTasks. State : "<<getState()->toString()<<" ("<<getState()->getId()<<")";
 
-	try {
+	if (getState()->isPaused()){
 
-		// we change the state of the sequence
+		cout << "\nResume SequenceTasks. State : "<<getState()->toString()<<" ("<<getState()->getId()<<")";
+
 		getState()->execute(this);
 
-		// make iterate point to beginning and increment it one by one until
-		// i)  it reaches the end of list or
-		// ii) it changes its state
-		while(!iterate->isEnd() && getState()->isRunning()) {
+	}else{
 
-			// get the task to execute
-			ITask* task = *(tasks_.begin()+iterate->getCurrentStepExecution());
+		cout << "\nExecuting SequenceTasks. State : "<<getState()->toString()<<" ("<<getState()->getId()<<")";
 
-			// executed the task if it is queued
-			if (task->getState()->isQueued()){
+		try {
 
-				{
-					// if the task is paused, we wait
-					while(task->getState()->isPaused()){
-						ITask::wait();
-					}
+			// we change the state of the sequence
+			getState()->execute(this);
 
-					// change the state of the task to execute
-					task->getState()->execute(task);
+			// make iterate point to beginning and increment it one by one until
+			// i)  it reaches the end of list or
+			// ii) it changes its state
+			while(!iterate->isEnd() && getState()->isRunning()) {
 
-					// execute the task
-					task->execute();
+				// get the task to execute
+				ITask* task = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
-				}while(task->getState()->isPaused());
+				// execute the task
+				task->execute();
 
-				// if the user did not cancel the task
-				if (!task->getState()->isCanceled()){
+				// increase the current index execution
+				iterate->next();
 
-					// change the state of the task to finish
-					task->getState()->finish(task);
-
-				}
+				// while the state is pause, we wait
+				while(getState()->isPaused()){}
 			}
 
+			if (getState()->isRunning())
+				getState()->finish(this);
 
-			// increase the current index execution
-			iterate->next();
-
+		} catch (...) {
+			cout<< endl <<"[Error]" << endl;
 		}
-
-		getState()->finish(this);
-
-	} catch (...) {
-		cout<< endl <<"[Error]" << endl;
 	}
 }
 
 void SequenceTasks::cancel() {
-	cout << "\nCancel the current task in execution.";
+	cout << "\nCancel the current execution.";
 
 	try {
 
-		// get the task in execution
-		ITask* task = *(tasks_.begin()+iterate->getCurrentStepExecution());
+		// cancel the complete sequence tasks
+		getState()->pause(this);
 
-		// change the state of the task
-		task->getState()->cancel(this);
-
-		// getState()->cancel(this);
+		getState()->cancel(this);
 
 	} catch (...) {
 		cout<< endl <<"[Error]" << endl;
@@ -111,13 +97,7 @@ void SequenceTasks::pause() {
 
 	try {
 
-		// get the task in execution
-		ITask* e = *(tasks_.begin()+iterate->getCurrentStepExecution());
-
-		// change the state of the task
-		e->getState()->pause(this);
-
-		// pause the complete sequence
+		// pause the complete sequence tasks
 		getState()->pause(this);
 
 	} catch (...) {
