@@ -10,6 +10,8 @@
 
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
+- [**Documentation**](https://task-management-service.readthedocs.io/en/latest/)
+
 ## Description
 
 The goal of this service is to handle the execution of multiple types of Tasks. 
