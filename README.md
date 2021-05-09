@@ -12,25 +12,21 @@
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
 ## Description
-
 The goal of this service is to handle the execution of multiple types of Tasks. 
 
 ### Requirements
-
 *   A Task can be executed instantly or can be scheduled for later execution;
 *   A Task can be in one of the following states: QUEUED, RUNNING, SUCCESS, FAILED;
 *   Failed Tasks shall not have any side effects;
 *   A user can cancel Tasks using the Task Management Service.
 
-### Examples of the Tasks to execute:
-
+### Examples of the Tasks to execute
 *   Batch data load to a data warehouse;
 *   Index files;
 *   Send notifications.
 
 
-##Solution 
-
+## Solution
 The proposed solution not only meets the requirements but also implements the following new functionalities:
 
 *   Execute a task and/or a set of tasks.
@@ -44,7 +40,6 @@ The proposed solution not only meets the requirements but also implements the fo
 
 
 ### Design
-
 The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-management-service/tree/main/design)
 
 The class diagram is as follow:
@@ -84,7 +79,6 @@ We added two more states:
 *   PAUSED : means that the task is stopped and can be resumed. 
   
 ## Development
-
 The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus). Here, we have all the computational requirements.
 
 Since the repository contains submodules (google test library), please, clone the repository as follow:
