@@ -30,7 +30,7 @@ class ClientControl {
 	//################### CONSTRUCTOR ###################
 
 	public:
-		ClientControl(SequenceTasksCatalogConstructor* sequenceConstructor);
+		ClientControl(SequenceTasksCatalogConstructor* catalog);
 		virtual ~ClientControl();
 
 

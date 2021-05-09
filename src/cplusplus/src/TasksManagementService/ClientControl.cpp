@@ -11,7 +11,6 @@
 
 
 //################### CONSTRUCTOR ###################
-
 ClientControl::ClientControl(SequenceTasksCatalogConstructor* catalogConstructor) {
 
 	cout << "\n\nConstructor Control";
@@ -22,7 +21,8 @@ ClientControl::ClientControl(SequenceTasksCatalogConstructor* catalogConstructor
 
 ClientControl::~ClientControl() {
 
-	cout << "Destructor of the class Control";
+	cout << "\nDestructor of the class Control";
+	delete catalogConstructor_;
 	delete tasksManagement_;
 
 }
