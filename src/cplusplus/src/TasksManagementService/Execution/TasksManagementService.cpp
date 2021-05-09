@@ -55,6 +55,6 @@ void TasksManagementService::add(ITask* task){
 
 	if (currentSequenceTask_ == -1)
 		throw "The current executable id is not initialized in the TasksManagementService. Please, call the method select(Id)";
-	SequenceTasks* tasks = (SequenceTasks*) tasksCatalog_[currentSequenceTask_];
+	SequenceTasks* tasks = static_cast<SequenceTasks*>(tasksCatalog_[currentSequenceTask_]);
 	tasks->add(task);
 }

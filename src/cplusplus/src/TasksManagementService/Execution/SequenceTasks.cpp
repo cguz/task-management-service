@@ -36,8 +36,6 @@ SequenceTasks::~SequenceTasks() {
 void SequenceTasks::execute() {
 	cout << "\nExecuting SequenceTasks. State : "<<getState()->toString()<<" ("<<getState()->getId()<<")";
 
-	ITask* e;
-
 	try {
 
 		// we change the state of the sequence
@@ -49,30 +47,30 @@ void SequenceTasks::execute() {
 		while(!iterate->isEnd() && getState()->isRunning()) {
 
 			// get the task to execute
-			e = *(tasks_.begin()+iterate->getCurrentStepExecution());
+			ITask* task = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 			// executed the task if it is queued
-			if (e->getState()->isQueued()){
+			if (task->getState()->isQueued()){
 
 				{
 					// if the task is paused, we wait
-					while(e->getState()->isPaused()){
+					while(task->getState()->isPaused()){
 						ITask::wait();
 					}
 
 					// change the state of the task to execute
-					e->getState()->execute(e);
+					task->getState()->execute(task);
 
 					// execute the task
-					e->execute();
+					task->execute();
 
-				}while(e->getState()->isPaused());
+				}while(task->getState()->isPaused());
 
 				// if the user did not cancel the task
-				if (!e->getState()->isCanceled()){
+				if (!task->getState()->isCanceled()){
 
 					// change the state of the task to finish
-					e->getState()->finish(e);
+					task->getState()->finish(task);
 
 				}
 			}

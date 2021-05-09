@@ -60,11 +60,10 @@ string ITask::toString() {
 
 void ITask::wait(){
 
-	unsigned int microsecond = 1000000;
 	int duration = rand() % 3;
 
 	cout << endl << " ->  wait : " << duration << " seconds" <<endl;
 
-	sleep(duration * microsecond);
+	sleep(duration);
 
 }
