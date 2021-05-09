@@ -1,11 +1,8 @@
 # Design
-
 Author: [Cesar Augusto Guzman Alvarez](https://github.com/cguz/)
 
 ## Architecture
-
 The goal of this service is to handle the execution of multiple types of Tasks. 
-
 
 <img src="https://user-images.githubusercontent.com/15159632/117512725-79e2f300-af90-11eb-8bde-8a369c86bd32.png" alt="Architecture" title="Architecture" height="600px" />
   
@@ -27,7 +24,6 @@ The **TaskSendNotifications**, **TaskIndexFiles**, and **TaskBatchDataLoad** cla
 Finally, we applied a finite state machine (using the state design pattern) to control the execution state of the tasks. The state variable in the **ITask** class contains the current state. 
 
 ## State transition 
-
 The state transition of a task's finite state machine is as follow:
 
 <img src="https://raw.githubusercontent.com/cguz/task-management-service/b4911a248339fdd3fadec891f4efc77b691dc474/design/StateDiagram.svg" alt="State transition diagram" title="State transition diagram" height="400px" />
