@@ -54,7 +54,7 @@ To execute the **build** and **execute** command of the makefile please remove t
 
 Compile the source code
 
-    g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
+    g++ -pthread -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
 
 ## run
 
