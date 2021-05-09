@@ -53,7 +53,7 @@ class ITask {
 		/**
 		 * Update the name of the Task or the Sequence Task
 		 */
-		void 	setName(string name);
+		void 	setName(const string& name);
 
 		/**
 		 * Retrieve the name

@@ -42,7 +42,7 @@ State* ITask::getState( ) {
 
 }
 
-void ITask::setName(string name) {
+void ITask::setName(const string& name) {
 	name_ = name;
 }
 
@@ -65,6 +65,6 @@ void ITask::wait(){
 
 	cout << endl << " ->  wait : " << duration << " seconds" <<endl;
 
-	usleep(duration * microsecond);
+	sleep(duration * microsecond);
 
 }

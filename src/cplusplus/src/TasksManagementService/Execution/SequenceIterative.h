@@ -28,7 +28,7 @@ class SequenceIterative : public SequenceTasks {
 
 		//################### CONSTRUCTOR ###################
 
-		SequenceIterative(string name, ControlIterator* iterate);
+		SequenceIterative(const string& name, ControlIterator* iterate);
 		~SequenceIterative();
 
 

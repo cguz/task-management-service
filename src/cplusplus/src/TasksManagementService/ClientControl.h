@@ -65,10 +65,10 @@ class ClientControl {
 	private:
 
 		// Constructor of a catalog of a task sequence
-		SequenceTasksCatalogConstructor* _catalogConstructor;
+		SequenceTasksCatalogConstructor* catalogConstructor_;
 
 		// Constructor the sequence executor
-		TasksManagementService* _tasksManagement;
+		TasksManagementService* tasksManagement_;
 
 };
 

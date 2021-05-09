@@ -66,10 +66,10 @@ class TasksManagementService {
 
 	private:
 
-		short _currentSequenceTask = -1;
+		short currentSequenceTask_ = -1;
 
 		// Catalog of executable task or sequence tasks
-		unordered_map <short, ITask*> _tasksCatalog;
+		unordered_map <short, ITask*> tasksCatalog_;
 
 };
 

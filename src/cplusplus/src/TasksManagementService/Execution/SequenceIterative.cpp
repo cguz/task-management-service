@@ -12,7 +12,7 @@
 
 //################### CONSTRUCTOR ###################
 
-SequenceIterative::SequenceIterative(string name, ControlIterator* iterate)
+SequenceIterative::SequenceIterative(const string& name, ControlIterator* iterate)
 	: SequenceTasks(name, iterate) {
 
 }

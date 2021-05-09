@@ -31,7 +31,7 @@ void Task::simulateDuration(){
 
 	cout << endl << " ->  duration : " << duration << " seconds" << endl;
 
-	usleep(duration * microsecond);
+	sleep(duration * microsecond);
 
 }
 

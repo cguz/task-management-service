@@ -15,8 +15,8 @@
 ClientControl::ClientControl(SequenceTasksCatalogConstructor* catalogConstructor) {
 
 	cout << "\n\nConstructor Control";
-	_catalogConstructor = catalogConstructor;
-	_tasksManagement = new TasksManagementService();
+	catalogConstructor_ = catalogConstructor;
+	tasksManagement_ = new TasksManagementService();
 
 }
 
@@ -30,36 +30,36 @@ ClientControl::~ClientControl() {
 void ClientControl::build() {
 
 	for(int seqId : getSequenceIds()) {
-		_catalogConstructor->build(seqId);
+		catalogConstructor_->build(seqId);
 	}
 
 }
 
 void ClientControl::select(short Id) {
 
-	if(!_tasksManagement->isInitialized(Id)) {
-		_tasksManagement->setSequenceTasks(Id, _catalogConstructor->build(Id));
+	if(!tasksManagement_->isInitialized(Id)) {
+		tasksManagement_->setSequenceTasks(Id, catalogConstructor_->build(Id));
 	}
 
 }
 
 void ClientControl::add(ITask* task){
-	_tasksManagement->add(task);
+	tasksManagement_->add(task);
 }
 
 void ClientControl::execute() {
-	_tasksManagement->execute();
+	tasksManagement_->execute();
 }
 
 void ClientControl::cancel() {
-	_tasksManagement->cancel();
+	tasksManagement_->cancel();
 }
 
 void ClientControl::pause() {
-	_tasksManagement->pause();
+	tasksManagement_->pause();
 }
 
 
 vector<int> ClientControl::getSequenceIds(){
-	return _catalogConstructor->getSequenceIds();
+	return catalogConstructor_->getSequenceIds();
 }

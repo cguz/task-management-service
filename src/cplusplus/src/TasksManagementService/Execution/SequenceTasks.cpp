@@ -14,7 +14,7 @@
 //################### CONSTRUCTOR ###################
 
 // the constructor also creates the variable to iterate through the tasks in the sequence of tasks
-SequenceTasks::SequenceTasks(string name, ControlIterator* ite) : ITask(), iterate(ite) {
+SequenceTasks::SequenceTasks(const string& name, ControlIterator* ite) : ITask(), iterate(ite) {
 
 	// Sequence iterator
 	// NOTE This should be always a difference instance for a Sequence of tasks
@@ -49,7 +49,7 @@ void SequenceTasks::execute() {
 		while(!iterate->isEnd() && getState()->isRunning()) {
 
 			// get the task to execute
-			e = *(_tasks.begin()+iterate->getCurrentStepExecution());
+			e = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 			// executed the task if it is queued
 			if (e->getState()->isQueued()){
@@ -98,7 +98,7 @@ void SequenceTasks::cancel() {
 	try {
 
 		// get the task in execution
-		e = *(_tasks.begin()+iterate->getCurrentStepExecution());
+		e = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 		// change the state of the task
 		e->getState()->cancel(this);
@@ -118,7 +118,7 @@ void SequenceTasks::pause() {
 	try {
 
 		// get the task in execution
-		e = *(_tasks.begin()+iterate->getCurrentStepExecution());
+		e = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 		// change the state of the task
 		e->getState()->pause(this);
@@ -132,10 +132,10 @@ void SequenceTasks::pause() {
 }
 
 void SequenceTasks::add(ITask* exe) {
-	_tasks.push_back(exe);
+	tasks_.push_back(exe);
 
 	// we change the total number of steps according to the list of commands
-	iterate->setTotalNumberOfSteps(_tasks.size());
+	iterate->setTotalNumberOfSteps(tasks_.size());
 
 	cout << "\nAdding new task to execute.";
 

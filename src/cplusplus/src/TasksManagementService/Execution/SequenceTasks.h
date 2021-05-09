@@ -27,7 +27,7 @@ class SequenceTasks : public ITask {
 	public:
 
 		//################### CONSTRUCTOR ###################
-		SequenceTasks(string name, ControlIterator* iterate);
+		SequenceTasks(const string& name, ControlIterator* iterate);
 		virtual ~SequenceTasks();
 
 
@@ -54,7 +54,7 @@ class SequenceTasks : public ITask {
 	private:
 
 		// list of tasks or sequence of tasks to execute
-		vector <ITask*> _tasks;
+		vector <ITask*> tasks_;
 
 };
 
