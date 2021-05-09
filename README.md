@@ -92,8 +92,8 @@ Since the repository contains submodules (google test library), please, clone th
 
 Some examples of how to use the **ClientControl** class are in the files:
 
-* "src/cplusplus/src/main.cpp"
-* "src/cplusplus/tests/Integration-Test.cpp"
+  * "src/cplusplus/src/main.cpp"
+  * "src/cplusplus/tests/Integration-Test.cpp"
 
 For instance, the method **testExecutionOneTask**:
 
@@ -180,4 +180,3 @@ Anothe example is the method **testClientTasksAddNewOnePause**:
 This method selects the tasks sequence **SEQ_TASKS_GROUP1** that contains three tasks: 1.) Batch data load to a data warehouse;, 2) Index files; and 3) Send notifications (see the factory file [CustomSeqExampleTasksToExecuteFactory.cpp](https://github.com/cguz/task-management-service/blob/main/src/cplusplus/src/TasksManagementService/CLIENT/Creational/Factories/CustomSeqExampleTasksToExecuteFactory.cpp)). 
 
 Then, execute the task sequence using the std::thread. During execution add a new Task Index File, and wait for two seconds. Next, it pauses the task sequence for 5 seconds and executes it again. Finally, it waits for 30 seconds until the tasks sequence thread finishes.
-
