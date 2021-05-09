@@ -5,17 +5,17 @@
 
 
 
-#   Task Management Service
+#  Task Management Service
 
 <center><a href="http://visionspace.com/"><img src="https://user-images.githubusercontent.com/15159632/117484138-f7920900-af66-11eb-8def-6e9880860c4a.png" alt="VisionSpace" title="VisionSpace" height="100px" /></a></center>
 
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
-##    Description
+##   Description
 
 The goal of this service is to handle the execution of multiple types of Tasks. 
 
-###   Requirements
+###  Requirements
 
 *   A Task can be executed instantly or can be scheduled for later execution;
 *   A Task can be in one of the following states: QUEUED, RUNNING, SUCCESS, FAILED;
