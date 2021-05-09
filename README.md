@@ -35,6 +35,7 @@ The proposed solution not only meets the requirements but also implements the fo
 
 *   Execute a task and/or a set of tasks.
 *   Execute a task instantly or scheduled for later execution if more tasks are executing.
+*   Implementation with thread to execute the tasks form the client side.
 *   Prepare before execution the task or set of tasks to execute.
 *   Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
 *   Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
