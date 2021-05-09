@@ -109,12 +109,10 @@ void SequenceTasks::cancel() {
 void SequenceTasks::pause() {
 	cout << "\nPausing the current task in execution.";
 
-	ITask* e;
-
 	try {
 
 		// get the task in execution
-		e = *(tasks_.begin()+iterate->getCurrentStepExecution());
+		ITask* e = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 		// change the state of the task
 		e->getState()->pause(this);
@@ -127,8 +125,8 @@ void SequenceTasks::pause() {
 	}
 }
 
-void SequenceTasks::add(ITask* exe) {
-	tasks_.push_back(exe);
+void SequenceTasks::add(ITask* task) {
+	tasks_.push_back(task);
 
 	// we change the total number of steps according to the list of commands
 	iterate->setTotalNumberOfSteps(tasks_.size());
