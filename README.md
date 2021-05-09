@@ -3,7 +3,6 @@
 [![Drawio](https://img.shields.io/badge/-Drawio-orange)](https://drawio-app.com/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/79bf6932c2e844eea15d0fb1ed7e415c)](https://app.codacy.com/gh/cguz/task-management-service?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ESMValGroup/ESMValTool&amp;utm_campaign=Badge_Grade)
 
-
 # Task Management Service
 
 <center><a href="http://visionspace.com/"><img src="https://user-images.githubusercontent.com/15159632/117484138-f7920900-af66-11eb-8def-6e9880860c4a.png" alt="VisionSpace" title="VisionSpace" height="100px" /></a></center>
@@ -40,8 +39,8 @@ The proposed solution not only meets the requirements but also implements the fo
 *   Add two more states, CANCEL, and PAUSE (explained later).
 *   Implement integration test. The Unit test can be implemented similarl way.
 
-
 ### Design
+
 The design is in the folder ( 📁 ) ["design"](https://github.com/cguz/task-management-service/tree/main/design)
 
 The class diagram is as follow:
