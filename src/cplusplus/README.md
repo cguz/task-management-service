@@ -6,11 +6,11 @@
 
 # Requirements
 
-* Linux 4.19.0-16-amd64. Debian 4.19.181-1 (2021-03-19)
-* cmake version 3.13.4 : it can be installed executing as root the next command "apt install cmake".
-* Eclipse IDE for C/C++ Version: 2021-03 (4.19.0)
-* C/C++ CMake Build Support - Preview	10.2.0.202012191711	org.eclipse.cdt.cmake.feature.group	Eclipse CDT
-* Google Test library - Release 1.10.x. It is added as a submodule in the GitHub. 
+*  Linux 4.19.0-16-amd64. Debian 4.19.181-1 (2021-03-19)
+*  cmake version 3.13.4 : it can be installed executing as root the next command "apt install cmake".
+*  Eclipse IDE for C/C++ Version: 2021-03 (4.19.0)
+*  C/C++ CMake Build Support - Preview	10.2.0.202012191711	org.eclipse.cdt.cmake.feature.group	Eclipse CDT
+*  Google Test library - Release 1.10.x. It is added as a submodule in the GitHub. 
 
 
   > With version 2.13 of Git and later, --recurse-submodules can be used instead of --recursive:
@@ -48,9 +48,9 @@ To execute the **build** and **execute** command of the makefile please remove t
 
 ## Makefile
 
-- [build](#build)
-- [run](#run)
-- [integrationTest](#integrationTest)
+-  [build](#build)
+-  [run](#run)
+-  [integrationTest](#integrationTest)
 
 ## build
 
