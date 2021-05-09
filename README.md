@@ -83,7 +83,7 @@ We added two more states:
 *   PAUSED : means that the task is stopped and can be resumed. 
   
 ## Development
-The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus). Here, we have all the computational requirements.
+The source code in C++ is in the folder ( 📁 ) ["src/cplusplus/"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus). In that folder, we can find all the computational requirements needed to execute the code.
 
 Since the repository contains submodules (google test library), please, clone the repository as follow:
 
