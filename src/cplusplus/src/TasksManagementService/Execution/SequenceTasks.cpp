@@ -91,15 +91,13 @@ void SequenceTasks::execute() {
 void SequenceTasks::cancel() {
 	cout << "\nCancel the current task in execution.";
 
-	ITask* e;
-
 	try {
 
 		// get the task in execution
-		e = *(tasks_.begin()+iterate->getCurrentStepExecution());
+		ITask* task = *(tasks_.begin()+iterate->getCurrentStepExecution());
 
 		// change the state of the task
-		e->getState()->cancel(this);
+		task->getState()->cancel(this);
 
 		// getState()->cancel(this);
 
