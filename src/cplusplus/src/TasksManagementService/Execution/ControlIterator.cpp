@@ -21,6 +21,7 @@ ControlIterator::ControlIterator() {
 	init();
 	totalNumberOfSteps_ = 0;
 	lastStep_ = totalNumberOfSteps_-1;
+	totalNumberIterations_ = 1;
 }
 
 ControlIterator::ControlIterator(int totalNumberIterations) : totalNumberIterations_(totalNumberIterations) {

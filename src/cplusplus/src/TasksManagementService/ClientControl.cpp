@@ -21,7 +21,10 @@ ClientControl::ClientControl(SequenceTasksCatalogConstructor* catalogConstructor
 }
 
 ClientControl::~ClientControl() {
+
 	cout << "Destructor of the class Control";
+	delete tasksManagement_;
+
 }
 
 
