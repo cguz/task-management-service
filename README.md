@@ -92,8 +92,8 @@ Since the repository contains submodules (google test library), please, clone th
 
 Some examples of how to use the **ClientControl** class are in the files:
 
-  * "src/cplusplus/src/main.cpp"
-  * "src/cplusplus/tests/Integration-Test.cpp"
+*   "src/cplusplus/src/main.cpp"
+*   "src/cplusplus/tests/Integration-Test.cpp"
 
 For instance, the method **testExecutionOneTask**:
 
