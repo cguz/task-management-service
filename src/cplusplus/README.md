@@ -12,7 +12,6 @@
 *   C/C++ CMake Build Support - Preview	10.2.0.202012191711	org.eclipse.cdt.cmake.feature.group	Eclipse CDT
 *   Google Test library - Release 1.10.x. It is added as a submodule in the GitHub. 
 
-
   > With version 2.13 of Git and later, --recurse-submodules can be used instead of --recursive:
 
       git clone --recurse-submodules -j8 https://github.com/cguz/task-management-service.git
@@ -33,11 +32,9 @@
       cd task-management-service
       git submodule update --init --recursive
 
-
 # Code
 
 The code is in the folder ( 📁 ) ["TaskManegementService"](https://github.com/cguz/task-management-service/tree/main/src/cplusplus/TaskManagementService).
-
 
 The following rules are in the Makefile. They can be run automatically from eclipse. 
 
@@ -45,13 +42,11 @@ The folder ( 📁 ) ["build"](https://github.com/cguz/task-management-service/tr
 
 To execute the **build** and **execute** command of the makefile please remove the folder ( 📁 ) "build". 
 
-
 ## Makefile
 
 -   [build](#build)
 -   [run](#run)
 -   [integrationTest](#integrationTest)
-
 
 ## build
 
@@ -59,13 +54,11 @@ Compile the source code
 
     g++ -o ControlClient TaskManagementService/main.cpp TaskManagementService/Control.cpp TaskManagementService/\*/\*.cpp TaskManagementService/\*/\*/\*.cpp TaskManagementService/\*/\*/\*/\*.cpp
 
-
 ## run
 
 Execute the main of the ControlClient 
 
     ./ControlClient
-
 
 ## integrationTest
 
