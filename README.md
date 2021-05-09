@@ -51,7 +51,7 @@ The class diagram is as follow:
 
 <img src="https://raw.githubusercontent.com/cguz/task-management-service/4fb73a3c4c544c2f0ba223eb7c79e6f2c941b626/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
 
-**ClientControl** class creates tasks sequence and executes one task or a set of tasks (tasks sequence).
+** ClientControl ** class creates tasks sequence and executes one task or a set of tasks (tasks sequence).
 
 The **ClientControl** generates the tasks sequence through the class  **SequenceTasksCatalogConstructor**, procedure build(id: short), where id is the identifier of the tasks sequence. 
 
