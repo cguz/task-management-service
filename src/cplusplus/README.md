@@ -44,9 +44,9 @@ To execute the **build** and **execute** command of the makefile please remove t
 
 ## Makefile
 
--   [build](#build)
--   [run](#run)
--   [integrationTest](#integrationTest)
+*   [build](#build)
+*   [run](#run)
+*   [integrationTest](#integrationTest)
 
 ## build
 
