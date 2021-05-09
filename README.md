@@ -10,7 +10,7 @@
 
 Author: Cesar Augusto Guzman Alvarez [@cguz](https://github.com/cguz/)
 
-- [**Documentation**](https://task-management-service.readthedocs.io/en/latest/)
+[**Documentation**](https://task-management-service.readthedocs.io/en/latest/)
 
 ## Description
 
