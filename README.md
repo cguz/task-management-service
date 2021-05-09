@@ -14,30 +14,30 @@ The goal of this service is to handle the execution of multiple types of Tasks.
 
 ### Requirements
 
-* A Task can be executed instantly or can be scheduled for later execution;
-* A Task can be in one of the following states: QUEUED, RUNNING, SUCCESS, FAILED;
-* Failed Tasks shall not have any side effects;
-* A user can cancel Tasks using the Task Management Service.
+*  A Task can be executed instantly or can be scheduled for later execution;
+*  A Task can be in one of the following states: QUEUED, RUNNING, SUCCESS, FAILED;
+*  Failed Tasks shall not have any side effects;
+*  A user can cancel Tasks using the Task Management Service.
 
 ### Examples of the Tasks to execute:
 
-* Batch data load to a data warehouse;
-* Index files;
-* Send notifications.
+*  Batch data load to a data warehouse;
+*  Index files;
+*  Send notifications.
 
 
 ## Solution 
 
 The proposed solution not only meets the requirements but also implements the following new functionalities:
 
-* Execute a task and/or a set of tasks.
-* Execute a task instantly or scheduled for later execution if more tasks are executing.
-* Prepare before execution the task or set of tasks to execute.
-* Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
-* Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
-* Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
-* Add two more states, CANCEL, and PAUSE (explained later).
-* Implement integration test. The Unit test can be implemented similarl way.
+*  Execute a task and/or a set of tasks.
+*  Execute a task instantly or scheduled for later execution if more tasks are executing.
+*  Prepare before execution the task or set of tasks to execute.
+*  Simulate randomly the duration of a task. The duration can be a value between 0 and 5.
+*  Simulate randomly the failure of a task. The task can fail with a probability of 0.05. 
+*  Separate the task generation from the task execution. Allowing to add more tasks and monitor their execution easily.
+*  Add two more states, CANCEL, and PAUSE (explained later).
+*  Implement integration test. The Unit test can be implemented similarl way.
 
 
 ### Design
@@ -70,15 +70,15 @@ The state transition of a task's finite state machine is as follow:
 
 The states are:
 
-* QUEUED : means that the tasks are planned for their execution.
-* RUNNING : means that the tasks are executing.
-* SUCCESS : means that the tasks finish successfully.
-* FAILED : means that the task fails during its execution.
+*  QUEUED : means that the tasks are planned for their execution.
+*  RUNNING : means that the tasks are executing.
+*  SUCCESS : means that the tasks finish successfully.
+*  FAILED : means that the task fails during its execution.
 
 We added two more states:
 
-* CANCEL : means that the user cancels the task.
-* PAUSED : means that the task is stopped and can be resumed. 
+*  CANCEL : means that the user cancels the task.
+*  PAUSED : means that the task is stopped and can be resumed. 
   
 ## Development
 
