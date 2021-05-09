@@ -50,13 +50,13 @@ The class diagram is as follow:
 
 <img src="https://raw.githubusercontent.com/cguz/task-management-service/4fb73a3c4c544c2f0ba223eb7c79e6f2c941b626/design/TaskManagementService.svg" alt="Architecture" title="Architecture" height="600px" />
 
-** ClientControl ** class creates tasks sequence and executes one task or a set of tasks (tasks sequence).
+The **ClientControl** class creates tasks sequence and executes one task or a set of tasks (tasks sequence).
 
 The **ClientControl** generates the tasks sequence through the class  **SequenceTasksCatalogConstructor**, procedure build(id: short), where id is the identifier of the tasks sequence. 
 
-**SequenceTasksCatalogConstructor** class contains a catalog of task sequence factories. A tasks sequence factory (class **SequenceTasksFactory**) contains the necessary information to create one (class **Task**) or more tasks (class **SequenceTasks**) to be executed.
+The **SequenceTasksCatalogConstructor** class contains a catalog of task sequence factories. A tasks sequence factory (class **SequenceTasksFactory**) contains the necessary information to create one (class **Task**) or more tasks (class **SequenceTasks**) to be executed.
 
-**TaskManagementService** class is the start point to execute any task or task sequence.
+The **TaskManagementService** class is the start point to execute any task or task sequence.
 
 We implemented the **SequenceTasks** (tasks sequence), **Task**, and **ITask** classes using the composite pattern. This pattern allows us to treat the **SequenceTasks** and **Task** classes as a single instance of the same **ITask** class. 
 
