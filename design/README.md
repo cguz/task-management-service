@@ -34,12 +34,12 @@ The state transition of a task's finite state machine is as follow:
 
 The states are:
 
-* QUEUED : means that the tasks are planned for their execution.
-* RUNNING : means that the tasks are executing.
-* SUCCESS : means that the tasks finish successfully.
-* FAILED : means that the task fails during its execution.
+*  QUEUED : means that the tasks are planned for their execution.
+*  RUNNING : means that the tasks are executing.
+*  SUCCESS : means that the tasks finish successfully.
+*  FAILED : means that the task fails during its execution.
 
 We added two more states:
 
-* CANCEL : means that the user cancels the task.
-* PAUSED : means that the task is stopped and can be resumed. 
+*  CANCEL : means that the user cancels the task.
+*  PAUSED : means that the task is stopped and can be resumed. 
