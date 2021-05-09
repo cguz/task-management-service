@@ -218,7 +218,7 @@ void testClientTasksAddNewOnePause() {
 	cout << "3. Choose the sequence task SEQ_CUSTOM1 for execution" << endl;
 	cout << "---------------------------------------" << endl;
 
-	// SEQ_CUSTOM1 contains three tasks: 1.) Batch data load to a data warehouse;, 2) Index files; and 3) Send notifications.s
+	// SEQ_CUSTOM1 contains three tasks: 1.) Batch data load to a data warehouse;, 2) Index files; and 3) Send notifications.
 	controlClient->select(CustomSequenceTasksCatalogConstructor::SEQ_CUSTOM1);
 
 	try {
